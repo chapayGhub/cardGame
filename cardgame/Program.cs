@@ -34,6 +34,7 @@ namespace cardgame
             world.deal(deck1, deck2);
             deck1.print();
             deck2.print();
+            Console.WriteLine(world);
 
 
 

@@ -73,6 +73,8 @@ namespace cardgame
                 {
                     player2.add(this.cards.ElementAt(j));
                 }
+
+                this.cards.Clear();
         }
 
 
