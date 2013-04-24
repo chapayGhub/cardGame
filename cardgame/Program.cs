@@ -29,8 +29,12 @@ namespace cardgame
             world.print();
 
             playerDeck deck1 = new playerDeck();
+            playerDeck deck2 = new playerDeck();
 
-            
+            world.deal(deck1, deck2);
+            deck1.print();
+            deck2.print();
+
 
 
 

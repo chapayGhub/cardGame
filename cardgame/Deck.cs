@@ -46,7 +46,7 @@ namespace cardgame
 
         }
 
-        public void deal()
+/*      public void deal()
         {
             int players = 2;
             int originalDeck = this.cards.Count;
@@ -59,6 +59,20 @@ namespace cardgame
                     //playerDeck.add(this.cards.ElementAt(j));
                 }
             }
+        }
+ */
+        public void deal(playerDeck player1, playerDeck player2)
+        {
+            int fullDeck = this.cards.Count;
+
+                for (int j = 0; j < fullDeck/2; j++)
+                {
+                    player1.add(this.cards.ElementAt(j));
+                }
+                for (int j = fullDeck/2; j < fullDeck; j++)
+                {
+                    player2.add(this.cards.ElementAt(j));
+                }
         }
 
 
