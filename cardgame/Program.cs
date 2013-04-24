@@ -28,7 +28,7 @@ namespace cardgame
             world.shuffle();
             world.print();
 
-            playerDeck deck1 = new playDeck();
+            playerDeck deck1 = new playerDeck();
 
             
 
