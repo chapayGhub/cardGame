@@ -14,6 +14,11 @@ namespace cardgame
         {
             this.cards = new List<Card>();
         }
+        public Card draw(playerDeck player)
+        {
+            player.add(this.cards.ElementAt(0));
+            //this.clear(this.cards.ElementAt(0));  Clear the card that was drawn from the playerdeck
+        }
     }
 
 
