@@ -9,20 +9,19 @@ namespace cardgame
 {
     class playerDeck : Deck
     {
-        List<Card> cards1;
+        List<Card> cards;
 
         public playerDeck()
         {
-            this.cards1 = new List<Card>();
+            this.cards = new List<Card>();
         }
 
         
-        public void draw()
+        public Card draw()
         {
-
-            //player.add(this.cards.ElementAt(1));
-            //this.cards.RemoveAt(1);
-            //Console.WriteLine(this);
+            Card temp = this.cards.ElementAt(0);
+            this.cards.RemoveAt(0);
+            return temp;
         }
 
 
