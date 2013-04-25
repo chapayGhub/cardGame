@@ -38,7 +38,8 @@ namespace cardgame
 
 
             Player Claus = new Player("Claus");
-            
+            Claus.print();
+            Console.WriteLine(Claus.streng());
 
 
 
