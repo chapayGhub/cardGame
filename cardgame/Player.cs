@@ -10,6 +10,7 @@ namespace cardgame
     {
         // Variables:
         private String playerName = "";
+        private playerDeck playDeck;
 
         // Methods:
         public string player
@@ -21,10 +22,18 @@ namespace cardgame
         public Player(String name)
         {
             this.playerName = name;
-            playerDeck playDeck = new playerDeck();
+            this.playDeck = new playerDeck();
         }
 
+        public void print() 
+        {
+            Console.WriteLine(this.playerName);
+            this.playDeck.print();
+        }
 
+        public string streng() {
+            return "Jeg hedder " + this.playerName + " Jeg har disse kort: " + this.playDeck ;
+        }
 
     }
 }
