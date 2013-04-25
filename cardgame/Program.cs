@@ -62,7 +62,7 @@ namespace cardgame
             //deck1.draw();
             //deck1.print();
 
-            
+            // Test af ignore Program.cs
             Console.ReadLine();
         }
     } // END PROGRAM
