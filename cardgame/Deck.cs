@@ -46,23 +46,6 @@ namespace cardgame
 
         }
 
-        // Deal all cards to players from overall deck and delete it:
-        //public void deal(playerDeck player1, playerDeck player2)
-        //{
-        //    int fullDeck = this.cards.Count;
-
-        //        for (int j = 0; j < fullDeck/2; j++)
-        //        {
-        //            player1.add(this.cards.ElementAt(j));
-        //        }
-        //        for (int j = fullDeck/2; j < fullDeck; j++)
-        //        {
-        //            player2.add(this.cards.ElementAt(j));
-        //        }
-
-        //        this.cards.Clear();
-        //}
-
         public void deal(params playerDeck[] players)
         {
             

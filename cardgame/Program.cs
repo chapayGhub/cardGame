@@ -37,23 +37,29 @@ namespace cardgame
             //world.print();
 
 
-            // Create separate player decks:
-            playerDeck deck1 = new playerDeck();
-            playerDeck deck2 = new playerDeck();
-                        
-            world.print();
+            Player Claus = new Player("Claus");
+            
 
+
+
+            // Create separate player decks:
+            //playerDeck deck1 = new playerDeck();
+            //playerDeck deck2 = new playerDeck();
+                        
+            
             // Deal contents of overall deck into separate player decks:
-            world.deal(deck1, deck2);
+            //world.deal(deck1, deck2);
             
             // Print contents of player decks:
-            deck1.print();
-            deck2.print();
+            //Console.WriteLine("Test player deck contents:");
+            //deck1.print();
+            //deck2.print();
             
             
             // Draw card from player deck:
-            deck1.draw();
-            deck1.print();
+            //Console.WriteLine("Test draw function:");
+            //deck1.draw();
+            //deck1.print();
 
             
             Console.ReadLine();
