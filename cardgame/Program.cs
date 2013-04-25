@@ -62,6 +62,7 @@ namespace cardgame
             //deck1.draw();
             //deck1.print();
 
+            //Så laver jeg en comment
             Console.ReadLine();
         }
     } // END PROGRAM
