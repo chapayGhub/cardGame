@@ -14,10 +14,14 @@ namespace cardgame
         {
             this.cards = new List<Card>();
         }
-        public Card draw(playerDeck player)
+        //Jeg har glemt hvad den skulle gøre..
+        //Men nu adder den et objekt til den der kalder funktionen og sletter et objekt fra listen
+
+        //Den smider en exception "out of range" eller sådan..
+        public void draw(playerDeck player)
         {
-            player.add(this.cards.ElementAt(0));
-            //this.clear(this.cards.ElementAt(0));  Clear the card that was drawn from the playerdeck
+            player.cards.Add(this.cards.ElementAt(0));
+            this.cards.RemoveAt(0);
         }
     }
 
