@@ -3,24 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace cardgame
 {
     class playerDeck : Deck
     {
-        List<Card> cards;
+        List<Card> cards1;
 
         public playerDeck()
         {
-            this.cards = new List<Card>();
+            this.cards1 = new List<Card>();
         }
 
-        //Virker ikke hvis playerDeck er "casted" til Deck???????
+        
         public void draw()
         {
+
             //player.add(this.cards.ElementAt(1));
             //this.cards.RemoveAt(1);
-            Console.WriteLine(this.cards.Count);
+            //Console.WriteLine(this);
         }
 
 
