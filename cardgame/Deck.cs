@@ -77,9 +77,9 @@ namespace cardgame
                 for (int i = 0; i < cardsPerPlayer; i++)
                 {
                     players[j].add(this.cards.ElementAt(i));
+                    this.cards.RemoveAt(i);
                 }
             }
-            this.cards.Clear();
             
         }
 
