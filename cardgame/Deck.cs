@@ -68,12 +68,13 @@ namespace cardgame
             
             int stacks = players.Length;
             int fullDeck = this.cards.Count;
+            int cardsPerPlayer = fullDeck/stacks;
 
             this.shuffle();
             
             for(int j =  0; j < stacks; j++)
             {
-                for (int i = 0; i < fullDeck/stacks; i++)
+                for (int i = 0; i < cardsPerPlayer; i++)
                 {
                     players[j].add(this.cards.ElementAt(i));
                 }

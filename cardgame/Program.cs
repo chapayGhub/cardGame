@@ -33,12 +33,19 @@ namespace cardgame
             playerDeck deck1 = new playerDeck();
             playerDeck deck2 = new playerDeck();
             playerDeck deck3 = new playerDeck();
-
-            world.deal(deck1, deck2);
+            playerDeck deck4 = new playerDeck();
+            playerDeck deck5 = new playerDeck();
+            playerDeck deck6 = new playerDeck();
+            
             world.print();
+            world.deal(deck1, deck2, deck3, deck4, deck5, deck6);
+            
             deck1.print();
             deck2.print();
             deck3.print();
+            deck4.print();
+            deck5.print();
+            deck6.print();
             world.print();
             //deck1.draw(deck2);
             //deck1.print();
