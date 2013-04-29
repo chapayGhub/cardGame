@@ -22,16 +22,9 @@ namespace cardgame
         
         public void draw(Deck deck)
         {
-            if (this.cards.Count == 0)
-            {
-                
-            }
-            else
-            {
                 Card temp = this.cards.ElementAt(0);
                 this.cards.RemoveAt(0);
                 deck.add(temp);
-            }
         }
 
 
