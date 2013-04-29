@@ -8,9 +8,6 @@ namespace cardgame
 {
     class LootDeck : Deck
     {
-        // Declare list of card objects:
-        List<Card> cards;
-
         // Constructor (takes a card object, since no loot without first win):
         public LootDeck(Card someCard)
         {
@@ -18,21 +15,30 @@ namespace cardgame
             this.add(someCard);
         }
 
-
-
-        /*
-        public void lootTest(params Card[] )
+        public override void print()
         {
-            Console.WriteLine("Test: Adding cards:");
-            this.add();
-            this.add();
+            Console.WriteLine("LootDeck contains {0} cards:", this.cards.Count);
+            base.print();
+        }
+
+
+
+        
+        public void lootTest(params Card[] someCards)
+        {
+            Console.WriteLine("LootDeck test: Adding cards:");
+            for (int i = 0; i < someCards.Length; i++)
+            {
+                this.add(someCards[i]);
+            }
+            
             this.print();
 
-            Console.WriteLine("Test: Shuffle method:");
+            Console.WriteLine("LootDeck test: Shuffle method:");
             this.shuffle();
             this.print();
         }
-        */
+        
 
 
     }
