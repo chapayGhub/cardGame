@@ -10,8 +10,8 @@ namespace cardgame
     {
         // Variables:
         private String playerName = "";
-        private playerDeck playDeck;
-        private LootDeck lootDeck;
+        public playerDeck playDeck;
+        public LootDeck lootDeck;
 
         // Methods:
 
@@ -20,6 +20,20 @@ namespace cardgame
             this.playerName = name;
             this.playDeck = new playerDeck();
             this.lootDeck = new LootDeck();
+        }
+
+        public void draw()
+        {
+            if (this.playDeck.Count() == 0)
+            {
+                //Call some sort of "LOOTDECK GIMME GIMME GIMME!"
+                this.lootDeck.giveDeck();
+                this.playDeck.draw();
+            }
+            else
+            {
+                this.playDeck.draw();
+            }
         }
 
         public void print() 
