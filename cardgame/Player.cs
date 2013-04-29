@@ -11,28 +11,24 @@ namespace cardgame
         // Variables:
         private String playerName = "";
         private playerDeck playDeck;
+        private LootDeck lootDeck;
 
         // Methods:
-        public string player
-        {
-            get { return playerName; }
-            set { playerName = value; }
-        }
 
         public Player(String name)
         {
             this.playerName = name;
             this.playDeck = new playerDeck();
+            this.lootDeck = new LootDeck();
         }
 
         public void print() 
         {
-            Console.WriteLine(this.playerName);
+            Console.WriteLine("Player: " + this.playerName);
+            Console.WriteLine("Playdeck:");
             this.playDeck.print();
-        }
-
-        public string streng() {
-            return "Jeg hedder " + this.playerName + " Jeg har disse kort: " + this.playDeck ;
+            Console.WriteLine("Lootdeck:");
+            this.lootDeck.print();
         }
 
     }
