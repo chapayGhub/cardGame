@@ -21,6 +21,11 @@ namespace cardgame
             base.print();
         }
 
+        public List<Card> giveCardsToPlayerDeck()
+        {
+            return this.cards;
+        }
+
 
 
         
