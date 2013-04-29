@@ -9,10 +9,9 @@ namespace cardgame
     class LootDeck : Deck
     {
         // Constructor (takes a card object, since no loot without first win):
-        public LootDeck(Card someCard)
+        public LootDeck()
         {
             this.cards = new List<Card>();
-            this.add(someCard);
         }
 
         public override void print()
@@ -21,11 +20,13 @@ namespace cardgame
             base.print();
         }
 
-        public List<Card> giveCardsToPlayerDeck()
+        /*
+        public static List<Card> giveCardsToPlayerDeck()
         {
             return this.cards;
         }
-
+         */ 
+        
 
 
         
