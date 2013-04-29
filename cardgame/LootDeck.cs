@@ -21,12 +21,14 @@ namespace cardgame
         }
 
         
-        public void giveDeck()
+        public void giveDeck(Deck deck)
         {
             foreach (var card in this.cards)
             {
-                this.add(card);
+                deck.add(card);
             }
+
+            this.cards.Clear();
         }
          
         
