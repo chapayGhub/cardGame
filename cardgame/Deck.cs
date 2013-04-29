@@ -8,7 +8,7 @@ namespace cardgame
 {
     class Deck
     {
-        List<Card> cards;
+        protected List<Card> cards;
 
         public Deck()
         {
@@ -20,9 +20,8 @@ namespace cardgame
             this.cards.Add(c);
         }
 
-        public void print()
+        public virtual void print()
         {
-            Console.WriteLine("Deck contains {0} cards:", this.cards.Count);
             foreach (var card in this.cards)
                 Console.WriteLine("{0}, population: {1}", card.Country, card.Population);
             Console.WriteLine();
