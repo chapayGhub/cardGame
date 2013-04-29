@@ -20,12 +20,15 @@ namespace cardgame
             base.print();
         }
 
-        /*
-        public static List<Card> giveCardsToPlayerDeck()
+        
+        public void giveDeck()
         {
-            return this.cards;
+            foreach (var card in this.cards)
+            {
+                this.add(card);
+            }
         }
-         */ 
+         
         
 
 
