@@ -14,7 +14,23 @@ namespace cardgame
         {
 
         }
-        
+
+        public int compare(string value)
+        {
+            //Indsæt switch case til at kalde de forskellige værdier her!
+            string caseSwitch = value;
+            switch (caseSwitch)
+            {
+                case "population":
+                    return this.cards.ElementAt(0).Population;
+                //case "country": 
+                //    return this.cards.ElementAt(0).Country;
+                default:
+                    Console.WriteLine("Value not found");
+                    return 0;
+            }
+        }
+
         public void draw(Deck deck)
         {
                 Card temp = this.cards.ElementAt(0);
