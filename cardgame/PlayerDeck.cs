@@ -14,11 +14,6 @@ namespace cardgame
         {
 
         }
-
-        public int Count()
-        {
-            return this.cards.Count();
-        }
         
         public void draw(Deck deck)
         {

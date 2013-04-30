@@ -14,6 +14,13 @@ namespace cardgame
         private int populationSize = 0;
 
         // Methods:
+        // Constructor:
+        public Card(String cName, int popSize)
+        {
+            countryName = cName;
+            populationSize = popSize;
+        }        
+        
         public string Country
         {
             get { return countryName; }
@@ -28,14 +35,6 @@ namespace cardgame
                 if (value > 0) { populationSize = value; }
                 else { Console.WriteLine("Please enter non-negative population size"); }
             }
-        }
-
-
-        // Constructor:
-        public Card(String cName, int popSize)
-        {
-            countryName = cName;
-            populationSize = popSize;
         }
 
         public void printCardInfo()

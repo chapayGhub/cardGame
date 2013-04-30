@@ -25,7 +25,11 @@ namespace cardgame
             foreach (var card in this.cards)
                 Console.WriteLine("{0}, population: {1}", card.Country, card.Population);
             Console.WriteLine();
+        }
 
+        public int Count()
+        {
+            return this.cards.Count();
         }
 
         public void shuffle()
