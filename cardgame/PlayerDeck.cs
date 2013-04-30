@@ -18,8 +18,7 @@ namespace cardgame
         public int compare(string value)
         {
             //Indsæt switch case til at kalde de forskellige værdier her!
-            string caseSwitch = value;
-            switch (caseSwitch)
+            switch (value)
             {
                 case "population":
                     return this.cards.ElementAt(0).Population;
