@@ -22,6 +22,11 @@ namespace cardgame
             this.lootDeck = new LootDeck();
         }
 
+        public int compareValue(string value)
+        {
+            return this.playDeck.compare(value);
+        }
+
         public void draw()
         {
             if (this.playDeck.Count() == 0)
