@@ -19,48 +19,27 @@ namespace cardgame
             Card norja = new Card("Norja", 5000000);
 
             // Create list for overall deck:
-            Deck world = new Deck();
+            TotalDeck world = new TotalDeck();
             
             // Populate overall deck with premade cards:
             world.add(danmag);
             world.add(swarje);
-            world.add(murica);
             world.add(inglin);
+            world.add(murica);
             world.add(canadia);
             world.add(norja);
-            
-            // Print the contents of the overall deck:
-            //world.print();
-
-            // Shuffle the overall deck:
-            //world.shuffle();
-            //world.print();
 
 
-            Player Claus = new Player("Claus");
-            Claus.print();
-            Console.WriteLine(Claus.streng());
+            Player jack = new Player("Jack");
+            Player jill = new Player("Jill");
 
 
+            world.deal(jack.playDeck, jill.playDeck);
 
-            // Create separate player decks:
-            //playerDeck deck1 = new playerDeck();
-            //playerDeck deck2 = new playerDeck();
-                        
-            
-            // Deal contents of overall deck into separate player decks:
-            //world.deal(deck1, deck2);
-            
-            // Print contents of player decks:
-            //Console.WriteLine("Test player deck contents:");
-            //deck1.print();
-            //deck2.print();
-            
-            
-            // Draw card from player deck:
-            //Console.WriteLine("Test draw function:");
-            //deck1.draw();
-            //deck1.print();
+            jack.print();
+            jill.print();
+
+            Console.WriteLine(jack.compareValue("population"));
 
             //Så laver jeg en comment
             Console.ReadLine();

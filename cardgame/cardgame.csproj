@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Card.cs" />
+    <Compile Include="Comparator.cs" />
     <Compile Include="Deck.cs" />
     <Compile Include="LootDeck.cs" />
     <Compile Include="Player.cs" />
