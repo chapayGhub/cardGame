@@ -37,6 +37,11 @@ namespace cardgame
                 deck.add(temp);
         }
 
+        public override void print()
+        {
+            Console.WriteLine("PlayerDeck contains {0} cards:", this.cards.Count);
+            base.print();
+        }
 
 
 

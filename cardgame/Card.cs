@@ -37,11 +37,6 @@ namespace cardgame
             }
         }
 
-        public void printCardInfo()
-        {
-            Console.WriteLine("Population of {0} is {1} people.", this.Country, this.Population);
-        }
-
     
     
     }
