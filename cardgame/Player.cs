@@ -29,18 +29,9 @@ namespace cardgame
             return this.playDeck.compare(value);
         }
 
-        public void draw()
+        public void getLootCard(Player winner)
         {
-            if (this.playDeck.Count() == 0)
-            {
-                //Call some sort of "LOOTDECK GIMME GIMME GIMME!"
-                //this.lootDeck.giveDeck();
-                //this.playDeck.draw();
-            }
-            else
-            {
-            //    this.playDeck.draw();
-            }
+              this.playDeck.draw(winner.lootDeck);
         }
 
         public void print() 
