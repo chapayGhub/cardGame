@@ -22,6 +22,8 @@ namespace cardgame
             this.lootDeck = new LootDeck();
         }
 
+        public string getPlayerName { get { return playerName; } }
+
         public int compareValue(string value)
         {
             return this.playDeck.compare(value);
