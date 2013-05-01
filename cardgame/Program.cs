@@ -39,7 +39,10 @@ namespace cardgame
             jack.print();
             jill.print();
 
-            Console.WriteLine(jack.compareValue("population"));
+            Comparator.doSomething(jack, jill, "population");
+
+            jack.print();
+            jill.print();
 
             //Så laver jeg en comment
             Console.ReadLine();
