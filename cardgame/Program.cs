@@ -39,7 +39,7 @@ namespace cardgame
             jack.print();
             jill.print();
 
-            Comparator.doSomething(jack, jill, "population");
+            Comparator.compareCategory(jack, jill, "population");
 
             jack.print();
             jill.print();

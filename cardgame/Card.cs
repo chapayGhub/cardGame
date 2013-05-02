@@ -8,11 +8,10 @@ namespace cardgame
 {
     class Card
     {
-
         // Variables:
         private String countryName = "";
         private int populationSize = 0;
-
+        
         // Methods:
         // Constructor:
         public Card(String cName, int popSize)
