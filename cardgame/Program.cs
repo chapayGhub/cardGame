@@ -44,6 +44,9 @@ namespace cardgame
             jack.print();
             jill.print();
 
+            PopulateDeck.populate(jack.playDeck);
+            jack.print();
+
             //Så laver jeg en comment
             Console.ReadLine();
         }
