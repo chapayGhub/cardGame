@@ -8,7 +8,7 @@ namespace cardgame
 {
     class Card
     {
-        private String countryName = "";
+        public String countryName { get; private set; }
         public List<Category> categoryList;
 
         // Constructor:
@@ -24,6 +24,9 @@ namespace cardgame
         {
             return this.categoryList.ElementAt(val1).printCategoryContent();
         }
+
+
+
 
     
     
