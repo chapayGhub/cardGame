@@ -8,32 +8,21 @@ namespace cardgame
 {
     class Card
     {
-        // Variables:
         private String countryName = "";
-        private int populationSize = 0;
-        
-        // Methods:
+        public List<Category> categoryList;
+
         // Constructor:
-        public Card(String cName, int popSize)
+        public Card(String cName, String categoryName, float categoryValue)
         {
             countryName = cName;
-            populationSize = popSize;
-        }        
+            categoryList = new List<Category>();
+            categoryList.Add( new Category(categoryName, categoryValue) );
         
-        public string Country
-        {
-            get { return countryName; }
-            set { countryName = value; }
         }
 
-        public int Population
+        public String printCategory(int val1)
         {
-            get { return populationSize; }
-            set
-            {
-                if (value > 0) { populationSize = value; }
-                else { Console.WriteLine("Please enter non-negative population size"); }
-            }
+            return this.categoryList.ElementAt(val1).printCategoryContent();
         }
 
     
