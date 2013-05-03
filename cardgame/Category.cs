@@ -21,6 +21,10 @@ namespace cardgame
         {
             return categoryName + ":" + categoryValue;
         }
+        public float returnCategoryValue()
+        {
+            return this.categoryValue;
+        }
 
 
     }

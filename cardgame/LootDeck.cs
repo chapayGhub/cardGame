@@ -11,7 +11,7 @@ namespace cardgame
         // Constructor:
         public LootDeck()
         {
-            this.cards = new List<Card>();
+            //this.cards = new List<Card>();
         }
 
         public override void print()
