@@ -8,10 +8,10 @@ namespace cardgame
 {
     static class Comparator
     {
-        public static void compareCategory(Player p1, Player p2, string s1)
+        public static void compareCategory(Player p1, Player p2, int s1)
         {
-            int val1 = p1.compareValue(s1);
-            int val2 = p2.compareValue(s1);
+            float val1 = p1.compareValue(s1);
+            float val2 = p2.compareValue(s1);
 
             if (val1 > val2)
             {

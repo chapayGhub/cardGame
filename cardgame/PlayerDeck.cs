@@ -12,22 +12,11 @@ namespace cardgame
 
         public playerDeck()
         {
-
         }
 
-        public int compare(string value)
+        public float compare(int place)
         {
-            //Indsæt switch case til at kalde de forskellige værdier her!
-            switch (value)
-            {
-                case "population":
-                    return this.cards.ElementAt(0).categoryList.Count; //Fix this!!! Returns a dummy atm.
-                //case "country": 
-                //    return this.cards.ElementAt(0).Country;
-                default:
-                    Console.WriteLine("Value not found");
-                    return 0;
-            }
+            return this.cards.ElementAt(0).categoryList.ElementAt(place).returnCategoryValue();
         }
 
         public void draw(Deck deck)

@@ -10,18 +10,27 @@ namespace cardgame
     {
         static void Main(string[] args)
         {   
-            // Create cards:
+            // Create the initial Deck
             TotalDeck world = new TotalDeck();
 
-            world.add(new Card("Danmark","Befolkning",9002));
-
+            //Populate the deck with cards from .txt-file
+            PopulateDeck.populate(world);
             world.print();
 
+            //Create some players
+            Player jack = new Player("Jack");
+            Player jill = new Player("Jill");
 
+            //Split the initial deck evenly amongst the players
+            world.deal(jack.playDeck, jill.playDeck);
+            jack.print();
+            jill.print();
 
+            //Compare first category value and hand the cards to winner
+            Comparator.compareCategory(jack, jill, 0);
 
-
-
+            jack.print();
+            jill.print();
 
 
 

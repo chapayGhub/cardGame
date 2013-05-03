@@ -24,9 +24,9 @@ namespace cardgame
 
         public string getPlayerName { get { return playerName; } }
 
-        public int compareValue(string value)
+        public float compareValue(int category)
         {
-            return this.playDeck.compare(value);
+            return this.playDeck.compare(category);
         }
 
         public void getLootCard(Player winner)
