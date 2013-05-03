@@ -30,19 +30,19 @@ namespace cardgame
          static void fixString(string parameters, Deck deck)
 {
     var split = parameters.Split(',');
-    if (split.Length != 2)
+    if (split.Length != 3)
           throw new ArgumentException("Wrong number of parameters in input string");
 
-    int a;
+    float a;
 
-    if (!int.TryParse(split[1], out a))
+    if (!float.TryParse(split[2], out a))
     {
         throw new ArgumentException("First parameter in input string is not an integer");
     }
           
 
     //Createcard..
-             deck.add(new Card(split[0],a));
+             deck.add(new Card(split[0],split[1],a));
              
 }
 

@@ -10,42 +10,21 @@ namespace cardgame
     {
         static void Main(string[] args)
         {   
-            // Create cards for overall deck:
-            Card danmag = new Card("Danmag", 5000000);
-            Card swarje = new Card("Swarje", 9000000);
-            Card murica = new Card("Murica", 300000000);
-            Card inglin = new Card("Inglin", 63000000);
-            Card canadia = new Card("Canadia", 34000000);
-            Card norja = new Card("Norja", 5000000);
-
-            // Create list for overall deck:
+            // Create cards:
             TotalDeck world = new TotalDeck();
-            
-            // Populate overall deck with premade cards:
-            world.add(danmag);
-            world.add(swarje);
-            world.add(inglin);
-            world.add(murica);
-            world.add(canadia);
-            world.add(norja);
+
+            world.add(new Card("Danmark","Befolkning",9002));
+
+            world.print();
 
 
-            Player jack = new Player("Jack");
-            Player jill = new Player("Jill");
 
 
-            world.deal(jack.playDeck, jill.playDeck);
 
-            jack.print();
-            jill.print();
 
-            Comparator.compareCategory(jack, jill, "population");
 
-            jack.print();
-            jill.print();
 
-            PopulateDeck.populate(jack.playDeck);
-            jack.print();
+
 
             //Så laver jeg en comment
             Console.ReadLine();

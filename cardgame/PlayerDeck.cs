@@ -21,7 +21,7 @@ namespace cardgame
             switch (value)
             {
                 case "population":
-                    return this.cards.ElementAt(0).Population;
+                    return this.cards.ElementAt(0).categoryList.Count; //Fix this!!! Returns a dummy atm.
                 //case "country": 
                 //    return this.cards.ElementAt(0).Country;
                 default:
