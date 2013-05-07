@@ -28,17 +28,19 @@ namespace cardgame
 
             if (val1 == val2)
             {
-                Random rnd = new Random();
                 // TODO: (20130507, sbm) If more than 2 players this needs to be rewritten:
+                Random rnd = new Random();
                 var determineRandomWinner = rnd.Next(1, 3);
-                Console.WriteLine("It's a draw! Player {0} is the randomly chosen winner.", determineRandomWinner);
+                                
                 if (determineRandomWinner == 1)
                 {
+                    Console.WriteLine("It's a draw! {0} is the randomly chosen winner.", p1.getPlayerName);
                     p1.getLootCard(p1);
                     p2.getLootCard(p1);
                 }
                 else
                 {
+                    Console.WriteLine("It's a draw! {0} is the randomly chosen winner.", p2.getPlayerName );
                     p1.getLootCard(p2);
                     p2.getLootCard(p2);
                 }
