@@ -15,6 +15,24 @@ namespace cardgame
         }
 
 
+        public void dealTwo(List<Player> players)
+        {
+            int stacks = players.Count;
+            int fullDeck = this.cards.Count;
+            int cardsPerPlayer = fullDeck / stacks;
+
+            this.shuffle();
+
+            for (int j = 0; j < stacks; j++)
+            {
+                for (int i = cardsPerPlayer - 1; i >= 0; i--)
+                {
+                    players.ElementAt(j).playDeck.add(this.cards.ElementAt(i));
+                    this.cards.RemoveAt(i);
+                }
+            }
+        }
+
         public void deal(params playerDeck[] players)
         {
 

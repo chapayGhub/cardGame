@@ -10,6 +10,10 @@ namespace cardgame
     {
         static void Main(string[] args)
         {   
+            /*
+             *
+             * 
+             * 
             // Create the initial Deck
             TotalDeck world = new TotalDeck();
 
@@ -31,6 +35,11 @@ namespace cardgame
 
             jack.print();
             jill.print();
+             * 
+             * 
+             */
+
+            Game gameid = new Game();
 
 
 
