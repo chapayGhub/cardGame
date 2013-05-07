@@ -45,6 +45,7 @@
     <Compile Include="Category.cs" />
     <Compile Include="Comparator.cs" />
     <Compile Include="Deck.cs" />
+    <Compile Include="Game.cs" />
     <Compile Include="LootDeck.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerDeck.cs" />
