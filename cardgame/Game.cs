@@ -53,6 +53,14 @@ namespace cardgame
 
         }
 
+        // TODO: Perhaps move this to Turn class.
+        // TODO: Make method so player whose turn it is can choose category.
+        // Play first round. Method is placed here bc access to list of players.
+        public void firstRound()
+        {
+            Comparator.compareCategory(0, this.players);
+        }
+
 
     }
 }

@@ -8,44 +8,34 @@ namespace cardgame
 {
     static class Comparator
     {
-        public static void compareCategory(Player p1, Player p2, int s1)
+        public static void compareCategory(int s1, List<Player> players)
         {
-            float val1 = p1.compareValue(s1);
-            float val2 = p2.compareValue(s1);
+            // TODO: delete testing writelines.
 
-            if (val1 > val2)
+            // Make array of category values that correspond to the index of the list of players:
+            float[] value = new float[players.Count];
+            for (int i = 0; i < players.Count; i++)
             {
-                Console.WriteLine("{0} wins the round", p1.getPlayerName );
-                p1.getLootCard(p1);
-                p2.getLootCard(p1);
-            }   
-            if(val1 < val2)
-            {
-                Console.WriteLine("{0} wins the round", p2.getPlayerName );
-                p1.getLootCard(p2);
-                p2.getLootCard(p2);
+                value[i] = players[i].compareValue(s1);
+                Console.WriteLine("Value at index[{0}]: {1}", i, value[i]);
             }
 
-            if (val1 == val2)
-            {
-                // TODO: (20130507, sbm) If more than 2 players this needs to be rewritten:
-                Random rnd = new Random();
-                var determineRandomWinner = rnd.Next(1, 3);
-                                
-                if (determineRandomWinner == 1)
-                {
-                    Console.WriteLine("It's a draw! {0} is the randomly chosen winner.", p1.getPlayerName);
-                    p1.getLootCard(p1);
-                    p2.getLootCard(p1);
-                }
-                else
-                {
-                    Console.WriteLine("It's a draw! {0} is the randomly chosen winner.", p2.getPlayerName );
-                    p1.getLootCard(p2);
-                    p2.getLootCard(p2);
-                }
+            // Get maximum value in value array and get the index of the maximum value:
+            float maxValue = value.Max();
+            Console.WriteLine("Maximum value: {0}", maxValue);
+            int maxIndex = value.ToList().IndexOf(maxValue);
+            Console.WriteLine("Index of maxValue: {0}", maxIndex);
 
+            // Announce winner and give him/her all cards from round:
+            Console.WriteLine("{0} wins the round!", players[maxIndex].getPlayerName);
+            for (int j = 0; j < players.Count; j++)
+            {
+                players[j].getLootCard(players[maxIndex]);
             }
+
+            // TODO: Make sure that the winner is random, if two or more players have same value.
+
+            
 
         }
     }
