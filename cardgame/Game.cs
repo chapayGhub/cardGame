@@ -8,7 +8,6 @@ namespace cardgame
 {
     class Game
     {
-        //A new game is created
         public List<Player> players;
 
         public Game()
@@ -53,8 +52,6 @@ namespace cardgame
             this.players.ForEach(Player => Player.print());
 
         }
-        //ask for a deck-name (Give choices if possible)
-        //Create cards and deal between players
 
 
     }
