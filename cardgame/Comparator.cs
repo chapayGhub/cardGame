@@ -25,6 +25,7 @@ namespace cardgame
             Console.WriteLine("Maximum value: {0}", maxValue);
             int maxIndex = value.ToList().IndexOf(maxValue);
             Console.WriteLine("Index of maxValue: {0}", maxIndex);
+            Console.WriteLine();
 
             // Announce winner and give him/her all cards from round:
             Console.WriteLine("{0} wins the round!", players[maxIndex].getPlayerName);
@@ -32,6 +33,8 @@ namespace cardgame
             {
                 players[j].getLootCard(players[maxIndex]);
             }
+            Console.WriteLine("The loot: ");
+
 
             // TODO: Make sure that the winner is random, if two or more players have same value.
 

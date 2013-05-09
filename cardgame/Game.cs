@@ -14,15 +14,15 @@ namespace cardgame
         {
             this.players = new List<Player>();
 
-            Console.WriteLine("Whalecum to game! Please enter mounts of platers");
+            Console.Write("Whalecum to game! Please enter mounts of platers: ");
             int tempPlayers = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
             createPlayers(tempPlayers);
 
             Console.WriteLine("Wat deck would you like to use??? Choose one of the following decks:");
-            Console.WriteLine("For countries press 1");
-            Console.WriteLine("For countries press 1");
-            Console.WriteLine("For countries press 1");
+            Console.Write("For countries press 1: ");
             int tempDeck = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
             createDeck(tempDeck);
         }
 
@@ -31,11 +31,13 @@ namespace cardgame
         {
             for (int i = 1; i < players+1; i++)
             {
-                Console.WriteLine("Player {0} name enter plx", i);
+                Console.Write("Player {0} name enter plx: ", i);
                 String playername = Console.ReadLine();
                 this.players.Add(new Player(playername));
                 
             }
+            Console.WriteLine();
+
             for (int i = 0; i < players; i++ )
             {
                 this.players.ElementAt(i).print();
@@ -58,7 +60,9 @@ namespace cardgame
         // Play first round. Method is placed here bc access to list of players.
         public void firstRound()
         {
-            Comparator.compareCategory(0, this.players);
+            Console.Write("Select category [0, 1]: ");
+            int selectCategory = Convert.ToInt32(Console.ReadLine());
+            Comparator.compareCategory(1, this.players);
         }
 
 
