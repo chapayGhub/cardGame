@@ -19,11 +19,19 @@ namespace cardgame
             return this.cards.ElementAt(0).categoryList.ElementAt(place).returnCategoryValue();
         }
 
+        // TODO: Find out if we use this method. If not: Delete
         public void draw(Deck deck)
         {
                 Card temp = this.cards.ElementAt(0);
                 this.cards.RemoveAt(0);
                 deck.add(temp);
+        }
+
+
+        public void showFirstCard()
+        {
+            // TODO: Print name of country/card here
+            this.cards.ElementAt(0).printAllCategories();
         }
 
         public override void print()
