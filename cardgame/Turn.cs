@@ -21,6 +21,7 @@ namespace cardgame
         public static void firstRound(Game gameName)
         {
             int firstPlayer = Turn.selectFirstPlayer(gameName.players);
+            // The following monster shows the first card of the player who got to go first:
             gameName.players.ElementAt(firstPlayer).playDeck.showFirstCard();
             int category = Turn.selectCategory();
             Comparator.compareCategory(category, gameName.players);
