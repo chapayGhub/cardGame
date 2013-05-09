@@ -6,21 +6,38 @@ using System.Threading.Tasks;
 
 namespace cardgame
 {
-    class Score
+    static class Score
     {
         //Variables
 
         //Constructor
 
         //Methods
+        static public void checkScore(List<Player> players)
+        {
+            foreach (Player playerId in players.Reverse<Player>())
+            {
+                int lootCards = playerId.lootDeck.Count();
+                int playCards = playerId.playDeck.Count();
 
-        //After each round update the total cardcount of each player
-            //If total cardcount == 0 Player is out
-            //If only one player remains A WINRAR IS HE!
+                if (lootCards + playCards == 0)
+                {
+                    //Remove player from the list of players
+                    Console.WriteLine(playerId.getPlayerName + " has no more cards.. Goodbye!");
+                    players.Remove(playerId);
+                }
+
+            }
+            if (players.Count == 1)
+                {
+                    //Assuming all other players has been removed from the list
+                    Score.winrar(players.ElementAt(0).getPlayerName);
+                }
+        }
 
         //Winner screenprint method because awesome!
 
-        public void winrar(string winrarName)
+        static public void winrar(string winrarName)
         {
             Console.WriteLine("********************************************************");
             Console.WriteLine("***************    A WINRAR IS YOU!!    ****************");
