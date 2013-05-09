@@ -26,23 +26,28 @@ namespace cardgame
 
     }
 
-
-         static void fixString(string parameters, Deck deck)
-{
-    var split = parameters.Split(',');
-    if (split.Length != 3)
-          throw new ArgumentException("Wrong number of parameters in input string");
-
-    float a;
-
-    if (!float.TryParse(split[2], out a))
+    // TODO: Refactor so string can contain arbitrary number of category-value pairs (if not too difficult).
+    static void fixString(string parameters, Deck deck)
     {
-        throw new ArgumentException("First parameter in input string is not an integer");
-    }
-          
+        var split = parameters.Split(',');
+        // Adjust to number of arguments that the string of parameters contains.
+        if (split.Length != 5)
+              throw new ArgumentException("Wrong number of parameters in input string");
+        
+        float a;
+        if (!float.TryParse(split[2], out a))
+        {
+            throw new ArgumentException("First parameter in input string is not an integer");
+        }
 
-    //Createcard..
-             deck.add(new Card(split[0],split[1],a));
+        float b;
+        if (!float.TryParse(split[4], out b))
+        {
+            throw new ArgumentException("First parameter in input string is not an integer");
+        }
+
+        // Create card:
+        deck.add(new Card(split[0],split[1],a,split[3],b));
              
 }
 
