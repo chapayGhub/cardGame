@@ -8,7 +8,7 @@ namespace cardgame
 {
     static class Comparator
     {
-        public static void compareCategory(int s1, List<Player> players)
+        public static void compareCategory(int selectedCategory, List<Player> players)
         {
             // TODO: delete testing writelines.
 
@@ -16,7 +16,7 @@ namespace cardgame
             float[] value = new float[players.Count];
             for (int i = 0; i < players.Count; i++)
             {
-                value[i] = players[i].compareValue(s1);
+                value[i] = players[i].compareValue(selectedCategory);
                 Console.WriteLine("Value at index[{0}]: {1}", i, value[i]);
             }
 
@@ -33,13 +33,16 @@ namespace cardgame
             {
                 players[j].getLootCard(players[maxIndex]);
             }
-            Console.WriteLine("The loot: ");
 
 
             // TODO: Make sure that the winner is random, if two or more players have same value.
+        }
 
-            
+        // TODO: Make this method, ktnxbye
+        public static void roundWinner(Player roundWinner)
+        {
 
         }
-    }
+    
+    } // END CLASS: COMPARATOR
 }

@@ -27,6 +27,15 @@ namespace cardgame
             return this.categoryList.ElementAt(val1).printCategoryContent();
         }
 
+        // This prints all categories on a given card by looping through it via printCategory:
+        public void printAllCategories()
+        {
+            int numberOfCategories = categoryList.Count;
+            for (int i = 0; i < numberOfCategories; i++)
+            {
+                Console.WriteLine(printCategory(i));
+            }
+        }
 
 
 

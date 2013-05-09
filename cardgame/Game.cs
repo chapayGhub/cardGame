@@ -55,16 +55,8 @@ namespace cardgame
 
         }
 
-        // TODO: Perhaps move this to Turn class.
-        // TODO: Make method so player whose turn it is can choose category.
-        // Play first round. Method is placed here bc access to list of players.
-        public void firstRound()
-        {
-            Console.Write("Select category [0, 1]: ");
-            int selectCategory = Convert.ToInt32(Console.ReadLine());
-            Comparator.compareCategory(1, this.players);
-        }
 
 
-    }
+
+    } // END CLASS: GAME
 }
