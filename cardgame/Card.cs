@@ -12,11 +12,13 @@ namespace cardgame
         public List<Category> categoryList;
 
         // Constructor:
-        public Card(String cName, String categoryName, float categoryValue)
+        // TODO: The card should be able to take n arguments of categoryNames and categoryValues ...
+        public Card(String cName, String categoryName, float categoryValue, String categoryName2, float categoryValue2)
         {
             countryName = cName;
             categoryList = new List<Category>();
             categoryList.Add( new Category(categoryName, categoryValue) );
+            categoryList.Add(new Category(categoryName2, categoryValue2));
         
         }
 
