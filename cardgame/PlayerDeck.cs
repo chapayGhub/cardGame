@@ -30,7 +30,7 @@ namespace cardgame
 
         public void showFirstCard()
         {
-            // TODO: Print name of country/card here
+            Console.WriteLine(this.cards.ElementAt(0).countryName);
             this.cards.ElementAt(0).printAllCategories();
         }
 
