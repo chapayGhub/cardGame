@@ -32,6 +32,7 @@ namespace cardgame
                 {
                     //Assuming all other players has been removed from the list
                     Score.winrar(players.ElementAt(0).getPlayerName);
+                    Console.ReadLine();
                 }
         }
 

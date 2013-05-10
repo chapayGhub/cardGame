@@ -8,7 +8,7 @@ namespace cardgame
 {
     static class Comparator
     {
-        public static void compareCategory(int selectedCategory, List<Player> players)
+        public static void compareCategory(int selectedCategory, List<Player> players, Game gameName)
         {
             // TODO: delete testing writelines.
 
@@ -34,6 +34,10 @@ namespace cardgame
                 players[j].getLootCard(players[maxIndex]);
             }
 
+            // Give the next turn to winner of this round:
+            int winnerOfRound = maxIndex;
+            Turn.nextRound(gameName, winnerOfRound);
+
 
             // TODO: Make sure that the winner is random, if two or more players have same value.
         }
@@ -41,7 +45,7 @@ namespace cardgame
         // TODO: Make this method, ktnxbye
         public static void roundWinner(Player roundWinner)
         {
-
+            Console.WriteLine("Test: roundWinner method input: {0}", roundWinner.getPlayerName);
         }
     
     } // END CLASS: COMPARATOR
