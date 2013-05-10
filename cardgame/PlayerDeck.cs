@@ -19,7 +19,6 @@ namespace cardgame
             return this.cards.ElementAt(0).categoryList.ElementAt(place).returnCategoryValue();
         }
 
-        // TODO: Find out if we use this method. If not: Delete
         public void draw(Deck deck)
         {
                 Card temp = this.cards.ElementAt(0);
