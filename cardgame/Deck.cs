@@ -23,7 +23,7 @@ namespace cardgame
         public virtual void print()
         {
             foreach (var card in this.cards)
-                Console.WriteLine(card.countryName);
+                Console.Write(card.countryName + ", ");
             Console.WriteLine();
         }
 

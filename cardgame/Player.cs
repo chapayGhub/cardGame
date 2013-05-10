@@ -36,9 +36,11 @@ namespace cardgame
 
         public void print() 
         {
+
             Console.WriteLine("Player: " + this.playerName);
             this.playDeck.print();
             this.lootDeck.print();
+            Console.WriteLine();
         }
 
     }
