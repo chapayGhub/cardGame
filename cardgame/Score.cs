@@ -20,22 +20,23 @@ namespace cardgame
                 int lootCards = playerId.lootDeck.Count();
                 int playCards = playerId.playDeck.Count();
 
+                // Remove player from the list of players if she's out of cards:
                 if (lootCards + playCards == 0)
                 {
-                    // Remove player from the list of players
                     Console.WriteLine(playerId.getPlayerName + " has no more cards.. Goodbye!");
                     players.Remove(playerId);
                 }
 
+                // If the player's playDeck is empty and she has lootCards, then give them to playDeck:
                 if (playCards == 0 && lootCards > 0)
                 {
                     playerId.lootDeck.giveDeck(playerId.playDeck);
                 }
             }
 
+            // Last man standing gets a textbased celebration and the application exits:
             if (players.Count == 1)
                 {
-                    //Assuming all other players has been removed from the list
                     Score.winrar(players.ElementAt(0).getPlayerName);
                     Console.ReadLine();
                     Environment.Exit(0);
@@ -44,7 +45,6 @@ namespace cardgame
         }
 
         //Winner screenprint method because awesome!
-
         static public void winrar(string winrarName)
         {
             Console.WriteLine("********************************************************");

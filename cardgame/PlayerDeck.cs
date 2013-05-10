@@ -35,7 +35,7 @@ namespace cardgame
 
         public override void print()
         {
-            Console.WriteLine("PlayerDeck contains {0} cards:", this.cards.Count);
+            Console.Write("PlayerDeck contains {0} cards: ", this.cards.Count);
             base.print();
         }
 

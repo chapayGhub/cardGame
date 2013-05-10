@@ -14,9 +14,11 @@ namespace cardgame
         {
             this.players = new List<Player>();
 
-            Console.Write("Whalecum to game! Please enter mounts of platers: ");
+            Console.WriteLine("Whalecum to game!"); 
+            Console.Write("Please enter mounts of platers: ");
             int tempPlayers = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
+            Console.WriteLine("Test: Initialising players and decks:");
             createPlayers(tempPlayers);
 
             Console.WriteLine("Wat deck would you like to use??? Choose one of the following decks:");
@@ -47,9 +49,14 @@ namespace cardgame
         public void createDeck(int chosenDeck)
         {
             TotalDeck world = new TotalDeck();
+            Console.WriteLine("Test: Cards imported:");
             PopulateDeck.populate(world);
+            Console.WriteLine();
+            Console.WriteLine("Test: Deck contains the following cards:");
             world.print();
+            Console.WriteLine();
 
+            Console.WriteLine("Test: The cards have been dealt in the following way:");
             world.deal(this.players);
             this.players.ForEach(Player => Player.print());
 

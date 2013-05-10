@@ -16,7 +16,7 @@ namespace cardgame
 
         public override void print()
         {
-            Console.WriteLine("LootDeck contains {0} cards:", this.cards.Count);
+            Console.Write("LootDeck contains {0} cards: ", this.cards.Count);
             base.print();
         }
 
