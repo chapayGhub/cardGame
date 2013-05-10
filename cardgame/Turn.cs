@@ -21,20 +21,21 @@ namespace cardgame
         public static void firstRound(Game gameName)
         {
             int firstPlayer = Turn.selectFirstPlayer(gameName.players);
+            Score.checkScore(gameName.players);
             // The following monster shows the first card of the player who got to go first:
             gameName.players.ElementAt(firstPlayer).playDeck.showFirstCard();
             int category = Turn.selectCategory();
-            Comparator.compareCategory(category, gameName.players);
-            // TODO: Send winning player as argument to nextRound
-            Score.checkScore(gameName.players);
+            Comparator.compareCategory(category, gameName.players, gameName);
+                        
         }
 
         // TODO: Take winner of previous round as argument for this round
-        public static void nextRound(Game gameName)
+        public static void nextRound(Game gameName, int winnerOfPreviousRound)
         {
-            // TODO: Show first card of winner of previous round
+            Score.checkScore(gameName.players);
+            gameName.players.ElementAt(winnerOfPreviousRound).playDeck.showFirstCard();
             int category = Turn.selectCategory();
-            Comparator.compareCategory(category, gameName.players);
+            Comparator.compareCategory(category, gameName.players, gameName);
         }
 
         // TODO: Make number of categories automatically match test.txt
