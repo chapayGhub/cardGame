@@ -22,16 +22,24 @@ namespace cardgame
 
                 if (lootCards + playCards == 0)
                 {
-                    //Remove player from the list of players
+                    // Remove player from the list of players
                     Console.WriteLine(playerId.getPlayerName + " has no more cards.. Goodbye!");
                     players.Remove(playerId);
                 }
 
+                if (playCards == 0 && lootCards > 0)
+                {
+                    playerId.lootDeck.giveDeck(playerId.playDeck);
+                }
             }
+
             if (players.Count == 1)
                 {
                     //Assuming all other players has been removed from the list
                     Score.winrar(players.ElementAt(0).getPlayerName);
+                    Console.ReadLine();
+                    Environment.Exit(0);
+
                 }
         }
 
