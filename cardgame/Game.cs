@@ -50,7 +50,7 @@ namespace cardgame
             PopulateDeck.populate(world);
             world.print();
 
-            world.dealTwo(this.players);
+            world.deal(this.players);
             this.players.ForEach(Player => Player.print());
 
         }
