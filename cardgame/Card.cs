@@ -12,15 +12,20 @@ namespace cardgame
         public List<Category> categoryList;
 
         // Constructor:
-        public Card(String cName, params Category[] category)
+        public Card(String cName, List<Category> categories)
         {
             countryName = cName;
-            categoryList = new List<Category>();
-            for (int i = 0; i < category.Length; i++)
-            {
-                categoryList.Add(category[i]);
-            }
+            categoryList = categories;
         }
+        //public Card(String cName, params Category[] category)
+        //{
+        //    countryName = cName;
+        //    categoryList = new List<Category>();
+        //    for (int i = 0; i < category.Length; i++)
+        //    {
+        //        categoryList.Add(category[i]);
+        //    }
+        //}
 
         public String printCategory(int val1)
         {
