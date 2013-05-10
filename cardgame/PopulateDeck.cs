@@ -37,17 +37,19 @@ namespace cardgame
         float a;
         if (!float.TryParse(split[2], out a))
         {
-            throw new ArgumentException("First parameter in input string is not an integer");
+            throw new ArgumentException("Split 2 is not a float");
         }
 
         float b;
         if (!float.TryParse(split[4], out b))
         {
-            throw new ArgumentException("First parameter in input string is not an integer");
+            throw new ArgumentException("Split 4 is not a float");
         }
 
         // Create card:
-        deck.add(new Card(split[0],split[1],a,split[3],b));
+        Category cat1 = new Category(split[1], a);
+        Category cat2 = new Category(split[3], b);
+        deck.add(new Card(split[0], cat1, cat2));
              
 }
 
