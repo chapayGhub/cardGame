@@ -43,6 +43,7 @@ namespace cardgame
             int numberOfCategories = categoryList.Count;
             for (int i = 0; i < numberOfCategories; i++)
             {
+                Console.Write("\t [{0}]", i);
                 Console.WriteLine(printCategory(i));
             }
         }

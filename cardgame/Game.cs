@@ -14,15 +14,19 @@ namespace cardgame
         {
             this.players = new List<Player>();
 
-            Console.WriteLine("Whalecum to game!"); 
-            Console.Write("Please enter mounts of platers: ");
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("\n GEOGRAPHY CARD GAME\t\n");
+            Console.ResetColor();
+            worldMap();
+            Console.Write(" Enter number of players: ");
+            
             int tempPlayers = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
-            Console.WriteLine("Test: Initialising players and decks:");
+            
             createPlayers(tempPlayers);
 
-            Console.WriteLine("Wat deck would you like to use??? Choose one of the following decks:");
-            Console.Write("For countries press 1: ");
+            Console.WriteLine(" Choose deck type:");
+            Console.Write(" For countries press 1: ");
             int tempDeck = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
             createDeck(tempDeck);
@@ -33,34 +37,69 @@ namespace cardgame
         {
             for (int i = 1; i < players+1; i++)
             {
-                Console.Write("Player {0} name enter plx: ", i);
+                Console.Write(" Enter name of player {0}: ", i);
                 String playername = Console.ReadLine();
                 this.players.Add(new Player(playername));
                 
             }
             Console.WriteLine();
 
-            for (int i = 0; i < players; i++ )
-            {
-                this.players.ElementAt(i).print();
-            }
+            //Console.WriteLine("Test: Initialising players and decks:");
+            //for (int i = 0; i < players; i++ )
+            //{
+            //    this.players.ElementAt(i).print();
+            //}
         }
 
         public void createDeck(int chosenDeck)
         {
             TotalDeck world = new TotalDeck();
-            Console.WriteLine("Test: Cards imported:");
+            //Console.WriteLine("Test: Cards imported:");
             PopulateDeck.populate(world);
-            Console.WriteLine();
-            Console.WriteLine("Test: Deck contains the following cards:");
+            //Console.WriteLine();
+            //Console.ReadLine();
+
+            Console.WriteLine(" Deck contains the following cards:");
             world.print();
             Console.WriteLine();
+            Console.ReadLine();
 
-            Console.WriteLine("Test: The cards have been dealt in the following way:");
+            //Console.WriteLine("Test: The cards have been dealt in the following way:");
             world.deal(this.players);
-            this.players.ForEach(Player => Player.print());
+            Console.WriteLine("Cards have been dealt.");
+            //this.players.ForEach(Player => Player.print());
+            //Console.ReadLine();
 
         }
+
+
+
+        static public void worldMap()
+        {
+            // Source: www.retrojunkie.com/asciiart/maps/worldmap.htm
+            Console.WriteLine(" :::::::::::''  ''::'      '::::::  `:::::::::::::'.:::::::::::::::");
+            Console.WriteLine(" :::::::::' :. :  :         ::::::  :::::::::::.:::':::::::::::::::");
+            Console.WriteLine(" ::::::::::  :   :::.       :::::::::::::..::::'     :::: : :::::::");
+            Console.WriteLine(" ::::::::    :':  '::'     ''::::::::::::: :'           '' ':::::::");
+            Console.WriteLine(" :'        : '   :  ::    .::::::::'    '                        .:");
+            Console.WriteLine(" :               :  .:: .::. ::::'                              :::");
+            Console.WriteLine(" :. .,.        :::  ':::::::::::.: '                      .:...::::");
+            Console.WriteLine(" :::::::.      '     .::::::: '''                         :: :::::.");
+            Console.WriteLine(" ::::::::            ':::::::::  '',            '    '   .:::::::::");
+            Console.WriteLine(" ::::::::.        :::::::::::: '':,:   '    :         ''' :::::::::");
+            Console.WriteLine(" ::::::::::      ::::::::::::'                        :::::::::::::");
+            Console.WriteLine(" : .::::::::.   .:''::::::::    '         ::   :   '::.::::::::::::");
+            Console.WriteLine(" :::::::::::::::. '  '::::::.  '  '     :::::.:.:.:.:.:::::::::::::");
+            Console.WriteLine(" :::::::::::::::: :     ':::::::::   ' ,:::::::::: : :.:'::::::::::");
+            Console.WriteLine(" ::::::::::::::::: '     :::::::::   . :'::::::::::::::' ':::::::::");
+            Console.WriteLine(" ::::::::::::::::::''   :::::::::: :' : ,:::::::::::'      ':::::::");
+            Console.WriteLine(" :::::::::::::::::'   .::::::::::::  ::::::::::::::::       :::::::");
+            Console.WriteLine(" :::::::::::::::::. .::::::::::::::::::::::::::::::::::::.'::::::::");
+            Console.WriteLine(" :::::::::::::::::' :::::::::::::::::::::::::::::::::::::::::::::::");
+            Console.WriteLine(" ::::::::::::::::::.:::::::::::::::::::::::::::::::::::::::::::::::");
+            Console.WriteLine();
+        }
+
 
 
 

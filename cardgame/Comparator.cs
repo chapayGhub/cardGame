@@ -8,33 +8,35 @@ namespace cardgame
 {
     static class Comparator
     {
+        // TODO: delete testing writelines.
         public static void compareCategory(int selectedCategory, List<Player> players, Game gameName)
         {
-            // TODO: delete testing writelines.
 
-            // Make array of category values that correspond to the index of the list of players:
+            // Makes an array of category values that correspond to the index of the list of players:
             float[] value = new float[players.Count];
             for (int i = 0; i < players.Count; i++)
             {
                 value[i] = players[i].compareValue(selectedCategory);
-                Console.WriteLine("Value at index[{0}]: {1}", i, value[i]);
+                //Console.WriteLine("Value at index[{0}]: {1}", i, value[i]);
             }
 
-            // Get maximum value in value array and get the index of the maximum value:
+            // Gets maximum value in value array and get the index of the maximum value:
             float maxValue = value.Max();
-            Console.WriteLine("Maximum value: {0}", maxValue);
+            //Console.WriteLine("Maximum value: {0}", maxValue);
             int maxIndex = value.ToList().IndexOf(maxValue);
-            Console.WriteLine("Index of maxValue: {0}", maxIndex);
-            Console.WriteLine();
+            //Console.WriteLine("Index of maxValue: {0}", maxIndex);
+            //Console.WriteLine();
 
-            // Announce winner and give him/her all cards from round:
-            Console.WriteLine("{0} wins the round!", players[maxIndex].getPlayerName);
+            // Gives loot to winner, checkScore and announce:
             for (int j = 0; j < players.Count; j++)
             {
                 players[j].getLootCard(players[maxIndex]);
             }
+            Score.checkScore(gameName.players);
+            Console.WriteLine(" {0} won the round and gets to pick next category: ", players[maxIndex].getPlayerName);
+            Console.WriteLine();
 
-            // Give the next turn to winner of this round:
+            // Gives the next turn to winner of this round:
             int winnerOfRound = maxIndex;
             Turn.nextRound(gameName, winnerOfRound);
 

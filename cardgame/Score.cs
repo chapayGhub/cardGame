@@ -23,7 +23,8 @@ namespace cardgame
                 // Remove player from the list of players if she's out of cards:
                 if (lootCards + playCards == 0)
                 {
-                    Console.WriteLine(playerId.getPlayerName + " has no more cards.. Goodbye!");
+                    Console.WriteLine(" " + playerId.getPlayerName + " is out of cards. Better luck next time!");
+                    Console.WriteLine();
                     players.Remove(playerId);
                 }
 
@@ -47,15 +48,15 @@ namespace cardgame
         //Winner screenprint method because awesome!
         static public void winrar(string winrarName)
         {
-            Console.WriteLine("********************************************************");
-            Console.WriteLine("***************    A WINRAR IS YOU!!    ****************");
-            Console.WriteLine("********************************************************");
-            Console.WriteLine("         ***************************************        ");
-            Console.WriteLine("                          " + winrarName);
-            Console.WriteLine("         ***************************************        ");
-            Console.WriteLine("********************************************************");
-            Console.WriteLine("***************    A WINRAR IS YOU!!    ****************");
-            Console.WriteLine("********************************************************");
+            Console.WriteLine(" ********************************************************");
+            Console.WriteLine(" ***************    A WINRAR IS YOU!!    ****************");
+            Console.WriteLine(" ********************************************************");
+            Console.WriteLine("          ***************************************        ");
+            Console.WriteLine("                      >>>>>" + winrarName + "<<<<<");
+            Console.WriteLine("          ***************************************        ");
+            Console.WriteLine(" ********************************************************");
+            Console.WriteLine(" ***************    A WINRAR IS YOU!!    ****************");
+            Console.WriteLine(" ********************************************************");
         }
 
 
