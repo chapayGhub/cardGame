@@ -19,7 +19,7 @@ namespace cardgame
 
         public string printCategoryContent()
         {
-            return categoryName + ":" + categoryValue;
+            return categoryName + ": " + categoryValue;
         }
         public float returnCategoryValue()
         {

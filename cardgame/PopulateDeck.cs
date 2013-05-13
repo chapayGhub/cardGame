@@ -17,11 +17,11 @@ namespace cardgame
         System.IO.StreamReader file = new System.IO.StreamReader("./decks/test.txt");
             while((line = file.ReadLine()) != null)
             {
-                 Console.WriteLine (line);
+                 //Console.WriteLine (line);
                  PopulateDeck.fixString(line, deck);
                  counter++;
             }
-            Console.WriteLine(counter + " cards added to " + deck);
+            //Console.WriteLine(counter + " cards added to " + deck);
             file.Close();
 
     }
@@ -29,7 +29,7 @@ namespace cardgame
     static void fixString(string parameters, Deck deck)
     {
         List<Category> categories = new List<Category>();
-        var split = parameters.Split(',');
+        var split = parameters.Split(';');
 
         for (int i = 0; i < (split.Length-1)/2; i++)
         {

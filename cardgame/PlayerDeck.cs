@@ -29,8 +29,9 @@ namespace cardgame
 
         public void showFirstCard()
         {
-            Console.WriteLine(this.cards.ElementAt(0).countryName);
+            Console.WriteLine("\tCountry: " + this.cards.ElementAt(0).countryName);
             this.cards.ElementAt(0).printAllCategories();
+            Console.WriteLine();
         }
 
         public override void print()

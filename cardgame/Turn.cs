@@ -13,14 +13,17 @@ namespace cardgame
             int numberOfPlayers = players.Count;
             Random rnd = new Random();
             var randomFirstPlayer = rnd.Next(0, numberOfPlayers);
-            Console.WriteLine("{0} goes first!", players[randomFirstPlayer].getPlayerName);
+            Console.WriteLine(" {0} goes first! Here's your card: ", players[randomFirstPlayer].getPlayerName);
             return randomFirstPlayer;
         }
 
-        // TODO: Make method so player whose turn it is can choose category.
         public static void firstRound(Game gameName)
         {
+            Console.Clear();
+            Console.WriteLine("GAME BEGINS");
+            Console.WriteLine();
             int firstPlayer = Turn.selectFirstPlayer(gameName.players);
+            Console.WriteLine();
             Score.checkScore(gameName.players);
             // The following monster shows the first card of the player who got to go first:
             gameName.players.ElementAt(firstPlayer).playDeck.showFirstCard();
@@ -29,7 +32,6 @@ namespace cardgame
                         
         }
 
-        // TODO: Take winner of previous round as argument for this round
         public static void nextRound(Game gameName, int winnerOfPreviousRound)
         {
             Score.checkScore(gameName.players);
@@ -39,10 +41,12 @@ namespace cardgame
         }
 
         // TODO: Make number of categories automatically match test.txt
+        // TODO: Make a try-catch to avoid errors if wrong type input
         public static int selectCategory()
         {
-            Console.Write("Select category [0, 1]: ");
+            Console.Write(" Select a category: ");
             int selectCategory = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
             return selectCategory;
 
         }
