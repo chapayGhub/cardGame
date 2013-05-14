@@ -27,7 +27,7 @@ namespace cardgame
             Score.checkScore(gameName.players);
             // The following monster shows the first card of the player who got to go first:
             gameName.players.ElementAt(firstPlayer).playDeck.showFirstCard();
-            int category = Turn.selectCategory();
+            int category = Turn.selectCategory(gameName);
             Comparator.compareCategory(category, gameName.players, gameName);
                         
         }
@@ -36,18 +36,29 @@ namespace cardgame
         {
             Score.checkScore(gameName.players);
             gameName.players.ElementAt(winnerOfPreviousRound).playDeck.showFirstCard();
-            int category = Turn.selectCategory();
+            int category = Turn.selectCategory(gameName);
             Comparator.compareCategory(category, gameName.players, gameName);
         }
 
         // TODO: Make number of categories automatically match test.txt
         // TODO: Make a try-catch to avoid errors if wrong type input
-        public static int selectCategory()
+        public static int selectCategory(Game game)
         {
+            
+            int categoryValue;
+            String categorySelected;
+
             Console.Write(" Select a category: ");
-            int selectCategory = Convert.ToInt32(Console.ReadLine());
+            categorySelected = Console.ReadLine();
+
+            while (!Int32.TryParse(categorySelected, out categoryValue) || categoryValue > game.numberOfCategories - 1 || categoryValue < 0)
+            {
+                Console.WriteLine("Not a valid number, try again.");
+                categorySelected = Console.ReadLine();
+            }
+
             Console.WriteLine();
-            return selectCategory;
+            return categoryValue;
 
         }
 

@@ -49,6 +49,11 @@ namespace cardgame
 
         }
 
+        public int getNumberOfCategories()
+        {
+            return this.cards.ElementAt(0).categoryList.Count;
+        }
+
         
 
     } // END DECK
