@@ -10,16 +10,18 @@ namespace cardgame
     {
         String categoryName { get; set; }
         float categoryValue { get; set; }
+        String categoryUnit { get; set; }
        
-        public Category(String name, float value)
+        public Category(String name, float value, String unit)
         {
             categoryName = name;
             categoryValue = value;
+            categoryUnit = unit;
         }
 
         public string printCategoryContent()
         {
-            return categoryName + ": " + categoryValue;
+            return categoryName + ": " + categoryValue + " " + categoryUnit;
         }
         public float returnCategoryValue()
         {
