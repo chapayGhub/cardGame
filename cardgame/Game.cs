@@ -9,6 +9,7 @@ namespace cardgame
     class Game
     {
         public List<Player> players;
+        public int numberOfCategories;
 
         public Game()
         {
@@ -56,6 +57,7 @@ namespace cardgame
             TotalDeck world = new TotalDeck();
             //Console.WriteLine("Test: Cards imported:");
             PopulateDeck.populate(world);
+            numberOfCategories = world.getNumberOfCategories();
             //Console.WriteLine();
             //Console.ReadLine();
 
