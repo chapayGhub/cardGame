@@ -51,7 +51,7 @@ namespace cardgame
             Console.Write(" Select a category: ");
             categorySelected = Console.ReadLine();
 
-            while (!Int32.TryParse(categorySelected, out categoryValue) || categoryValue > game.numberOfCategories - 1 || categoryValue < 0)
+            while (!Int32.TryParse(categorySelected, out categoryValue) || categoryValue > game.getNumberOfCategories() - 1 || categoryValue < 0)
             {
                 Console.WriteLine("Not a valid number, try again.");
                 categorySelected = Console.ReadLine();

@@ -9,7 +9,7 @@ namespace cardgame
     class Game
     {
         public List<Player> players;
-        public int numberOfCategories;
+        private int numberOfCategories;
 
         public Game()
         {
@@ -74,6 +74,10 @@ namespace cardgame
 
         }
 
+        public int getNumberOfCategories()
+        {
+            return this.numberOfCategories;
+        }
 
 
         static public void worldMap()
