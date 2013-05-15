@@ -28,13 +28,17 @@ namespace cardgame
             //Console.WriteLine();
 
             // Gives loot to winner, checkScore and announce:
+            Console.Clear();
+            Console.Write(" {0} won the round and gets the following loot cards: ", players[maxIndex].getPlayerName);
             for (int j = 0; j < players.Count; j++)
             {
+                players[j].playDeck.printFirstCardName();  
                 players[j].getLootCard(players[maxIndex]);
             }
             Score.checkScore(gameName.players);
-            Console.Clear();
-            Console.WriteLine(" {0} won the round and gets to pick next category: ", players[maxIndex].getPlayerName);
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine(" {0} gets to pick next category: ", players[maxIndex].getPlayerName);
             Console.WriteLine();
 
             // Gives the next turn to winner of this round:
