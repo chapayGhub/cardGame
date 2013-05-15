@@ -15,6 +15,7 @@ namespace cardgame
         //Methods
         static public void checkScore(List<Player> players)
         {
+
             foreach (Player playerId in players.Reverse<Player>())
             {
                 int lootCards = playerId.lootDeck.Count();
@@ -46,28 +47,39 @@ namespace cardgame
                     Environment.Exit(0);
 
                 }
+
         }
 
-        static public void quitPrintScoreboard(List<Player> players)
+        static public void printScoreboard(List<Player> players)
         {
-            int tempLargestDeck = 0;
-            Player tempWinner = new Player("tempPlayer");
-
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("\n Scoreboard:\t\n");
             Console.ResetColor();
 
-            var o = players.OrderBy(x => x.currentDeckSize());
-            foreach (Player playerId in o.Reverse<Player>())
+            var orderedByDeckSize = players.OrderBy(x => x.currentDeckSize());
+            foreach (Player playerId in orderedByDeckSize.Reverse<Player>())
             {
                 Console.WriteLine("\t" + playerId.getPlayerName + " has " + playerId.currentDeckSize() + " cards.");
+            }
+            Console.WriteLine();
+        }
+
+        static public void quitScore(List<Player> players)
+        {
+            int tempLargestDeck = 0;
+            Player tempWinner = new Player("tempPlayer");
+
+            Score.printScoreboard(players);
+
+            foreach (Player playerId in players)
+            {   
                 if (playerId.currentDeckSize() > tempLargestDeck)
                 {
                     tempLargestDeck = playerId.currentDeckSize();
                     tempWinner = playerId;
                 }
             }
-            Console.WriteLine();
+            
             Score.winrar(tempWinner.getPlayerName);
         }
         //Winner screenprint method because awesome!

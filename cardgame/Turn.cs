@@ -55,9 +55,15 @@ namespace cardgame
 
             if(categorySelected.ToUpper() == "Q")
             {
-                Score.quitPrintScoreboard(game.players);
+                Score.quitScore(game.players);
                 Console.ReadLine();
                 Environment.Exit(0);
+            }
+            if (categorySelected.ToUpper() == "S")
+            {
+                Score.printScoreboard(game.players);
+                Console.Write(" Select a category: ");
+                categorySelected = Console.ReadLine();
             }
 
             while (!Int32.TryParse(categorySelected, out categoryValue) || categoryValue > game.getNumberOfCategories() - 1 || categoryValue < 0)
