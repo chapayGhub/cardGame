@@ -60,6 +60,7 @@ namespace cardgame
             foreach (Player playerId in orderedByDeckSize.Reverse<Player>())
             {
                 Console.WriteLine("\t" + playerId.getPlayerName + " has " + playerId.currentDeckSize() + " cards.");
+                //Comment to test commit
             }
             Console.WriteLine();
         }
