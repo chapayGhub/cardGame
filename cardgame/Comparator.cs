@@ -13,7 +13,7 @@ namespace cardgame
         {
 
             // Makes an array of category values that correspond to the index of the list of players:
-            float[] value = new float[players.Count];
+            decimal[] value = new decimal[players.Count];
             for (int i = 0; i < players.Count; i++)
             {
                 value[i] = players[i].compareValue(selectedCategory);
@@ -21,7 +21,7 @@ namespace cardgame
             }
 
             // Gets maximum value in value array and get the index of the maximum value:
-            float maxValue = value.Max();
+            decimal maxValue = value.Max();
             //Console.WriteLine("Maximum value: {0}", maxValue);
             int maxIndex = value.ToList().IndexOf(maxValue);
             //Console.WriteLine("Index of maxValue: {0}", maxIndex);

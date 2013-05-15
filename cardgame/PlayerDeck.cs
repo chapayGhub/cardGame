@@ -14,7 +14,7 @@ namespace cardgame
         {
         }
 
-        public float compare(int place)
+        public decimal compare(int place)
         {
             return this.cards.ElementAt(0).categoryList.ElementAt(place).returnCategoryValue();
         }
