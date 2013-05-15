@@ -50,9 +50,12 @@ namespace cardgame
             int tempLargestDeck = 0;
             Player tempWinner = new Player("tempPlayer");
 
-            Console.WriteLine();
-            Console.WriteLine("Scoreboard:");
-            foreach (Player playerId in players)
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("\n Scoreboard:\t\n");
+            Console.ResetColor();
+
+            var o = players.OrderBy(x => x.currentDeckSize());
+            foreach (Player playerId in o.Reverse<Player>())
             {
                 Console.WriteLine("\t" + playerId.getPlayerName + " has " + playerId.currentDeckSize() + " cards.");
                 if (playerId.currentDeckSize() > tempLargestDeck)
