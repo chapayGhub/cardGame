@@ -20,7 +20,9 @@ namespace cardgame
         public static void firstRound(Game gameName)
         {
             Console.Clear();
-            Console.WriteLine("GAME BEGINS");
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("\n GAME BEGINS\t\n");
+            Console.ResetColor();
             Console.WriteLine();
             int firstPlayer = Turn.selectFirstPlayer(gameName.players);
             Console.WriteLine();
