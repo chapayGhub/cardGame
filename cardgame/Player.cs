@@ -28,6 +28,10 @@ namespace cardgame
         {
             return this.playDeck.compare(category);
         }
+        public int currentDeckSize()
+        {
+            return lootDeck.Count() + playDeck.Count();
+        }
 
         public void getLootCard(Player winner)
         {

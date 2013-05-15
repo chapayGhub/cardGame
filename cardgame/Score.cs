@@ -45,6 +45,25 @@ namespace cardgame
                 }
         }
 
+        static public void quitPrintScoreboard(List<Player> players)
+        {
+            int tempLargestDeck = 0;
+            Player tempWinner = new Player("tempPlayer");
+
+            Console.WriteLine();
+            Console.WriteLine("Scoreboard:");
+            foreach (Player playerId in players)
+            {
+                Console.WriteLine("\t" + playerId.getPlayerName + " has " + playerId.currentDeckSize() + " cards.");
+                if (playerId.currentDeckSize() > tempLargestDeck)
+                {
+                    tempLargestDeck = playerId.currentDeckSize();
+                    tempWinner = playerId;
+                }
+            }
+            Console.WriteLine();
+            Score.winrar(tempWinner.getPlayerName);
+        }
         //Winner screenprint method because awesome!
         static public void winrar(string winrarName)
         {

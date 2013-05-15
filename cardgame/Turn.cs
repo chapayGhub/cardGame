@@ -53,8 +53,7 @@ namespace cardgame
 
             if(categorySelected.ToUpper() == "Q")
             {
-                //TODO 20130515: Add some sort of text to show the score at time of exit.
-                Console.WriteLine("Add stuff about the score when the game is exited (There is a TODO about it)");
+                Score.quitPrintScoreboard(game.players);
                 Console.ReadLine();
                 Environment.Exit(0);
             }
