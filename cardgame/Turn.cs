@@ -51,6 +51,14 @@ namespace cardgame
             Console.Write(" Select a category: ");
             categorySelected = Console.ReadLine();
 
+            if(categorySelected.ToUpper() == "Q")
+            {
+                //TODO 20130515: Add some sort of text to show the score at time of exit.
+                Console.WriteLine("Add stuff about the score when the game is exited (There is a TODO about it)");
+                Console.ReadLine();
+                Environment.Exit(0);
+            }
+
             while (!Int32.TryParse(categorySelected, out categoryValue) || categoryValue > game.getNumberOfCategories() - 1 || categoryValue < 0)
             {
                 Console.WriteLine("Not a valid number, try again.");
