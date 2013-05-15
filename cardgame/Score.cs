@@ -21,11 +21,14 @@ namespace cardgame
                 int playCards = playerId.playDeck.Count();
 
                 // Remove player from the list of players if she's out of cards:
+
                 if (lootCards + playCards == 0)
                 {
-                    Console.WriteLine(" " + playerId.getPlayerName + " is out of cards. Better luck next time!");
                     Console.WriteLine();
+                    //Console.WriteLine("Playercount before remove: " + players.Count());
+                    Console.WriteLine(" " + playerId.getPlayerName + " is out of cards. Better luck next time!");
                     players.Remove(playerId);
+                    //Console.WriteLine("Playercount after remove: " + players.Count());
                 }
 
                 // If the player's playDeck is empty and she has lootCards, then give them to playDeck:
