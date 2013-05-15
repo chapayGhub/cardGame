@@ -24,7 +24,7 @@ namespace cardgame
 
         public string getPlayerName { get { return playerName; } }
 
-        public float compareValue(int category)
+        public decimal compareValue(int category)
         {
             return this.playDeck.compare(category);
         }

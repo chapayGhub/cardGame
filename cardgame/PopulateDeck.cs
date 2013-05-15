@@ -38,9 +38,9 @@ namespace cardgame
                 // categoryName split follows: 1, 4, 7, 10, 13, 16, ...
                 String categoryName = split[3 * i + 1];
 
-                float categoryValue;
+                decimal categoryValue;
                 // categoryValue split follows: 2, 5, 8, 11, 14, 17, ...
-                if (!float.TryParse(split[3 * i + 2], out categoryValue))
+                if (!decimal.TryParse(split[3 * i + 2], out categoryValue))
                 {
                     throw new ArgumentException("Split " + 3*i+2 + " is not a float" );
                 }

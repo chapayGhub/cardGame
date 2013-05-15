@@ -9,10 +9,10 @@ namespace cardgame
     public class Category
     {
         String categoryName { get; set; }
-        float categoryValue { get; set; }
+        decimal categoryValue { get; set; }
         String categoryUnit { get; set; }
        
-        public Category(String name, float value, String unit)
+        public Category(String name, decimal value, String unit)
         {
             categoryName = name;
             categoryValue = value;
@@ -23,7 +23,7 @@ namespace cardgame
         {
             return categoryName + ": " + categoryValue + " " + categoryUnit;
         }
-        public float returnCategoryValue()
+        public decimal returnCategoryValue()
         {
             return this.categoryValue;
         }
