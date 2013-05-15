@@ -33,6 +33,7 @@ namespace cardgame
                 players[j].getLootCard(players[maxIndex]);
             }
             Score.checkScore(gameName.players);
+            Console.Clear();
             Console.WriteLine(" {0} won the round and gets to pick next category: ", players[maxIndex].getPlayerName);
             Console.WriteLine();
 
