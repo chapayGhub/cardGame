@@ -22,38 +22,35 @@ namespace cardgame
 
             // Gets maximum value in value array and get the index of the maximum value:
             decimal maxValue = value.Max();
-            //Console.WriteLine("Maximum value: {0}", maxValue);
             int maxIndex = value.ToList().IndexOf(maxValue);
-            //Console.WriteLine("Index of maxValue: {0}", maxIndex);
-            //Console.WriteLine();
-
+            
+            // Save in string because checkScore() rearranges the index of players-list thereby obsoleting maxIndex:
+            string roundWinner = players[maxIndex].getPlayerName;
+            
             // Gives loot to winner, checkScore and announce:
             Console.Clear();
-            Console.Write(" {0} won the round and gets the following loot cards: ", players[maxIndex].getPlayerName);
+            Console.Write(" {0} won the round and gets the following loot cards: ", roundWinner);
             for (int j = 0; j < players.Count; j++)
             {
-                players[j].playDeck.printFirstCardName();  
+                players[j].playDeck.printFirstCardName();
                 players[j].getLootCard(players[maxIndex]);
             }
-            Score.checkScore(gameName.players);
+            
+            Score.checkScore(gameName, gameName.players, maxIndex);
+            
+            // TODO: Perhaps move this to checkScore? Or maybe not, but the nextRound-call is in checkScore ...
+            // TODO: If move announcement of winner to checkScore, then replace roundWinner-string here with maxIndex-player
             Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine(" {0} gets to pick next category: ", players[maxIndex].getPlayerName);
+            Console.WriteLine("\n {0} gets to pick next category: ", roundWinner);
             Console.WriteLine();
 
-            // Gives the next turn to winner of this round:
-            int winnerOfRound = maxIndex;
-            Turn.nextRound(gameName, winnerOfRound);
+
 
 
             // TODO: Make sure that the winner is random, if two or more players have same value.
         }
 
-        // TODO: Make this method, ktnxbye
-        public static void roundWinner(Player roundWinner)
-        {
-            Console.WriteLine("Test: roundWinner method input: {0}", roundWinner.getPlayerName);
-        }
+        
     
     } // END CLASS: COMPARATOR
 }

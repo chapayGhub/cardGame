@@ -42,7 +42,7 @@ namespace cardgame
 
         public void printFirstCardName()
         {
-            Console.Write(this.cards.ElementAt(0).countryName + ", ");
+            Console.Write(this.cards.ElementAt(0).countryName + "; ");
         }
 
 

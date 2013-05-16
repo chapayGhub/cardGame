@@ -26,7 +26,7 @@ namespace cardgame
             Console.WriteLine();
             int firstPlayer = Turn.selectFirstPlayer(gameName.players);
             Console.WriteLine();
-            Score.checkScore(gameName.players);
+            //Score.checkScore(gameName.players);
             // The following monster shows the first card of the player who got to go first:
             gameName.players.ElementAt(firstPlayer).playDeck.showFirstCard();
             int category = Turn.selectCategory(gameName);
@@ -36,7 +36,7 @@ namespace cardgame
 
         public static void nextRound(Game gameName, int winnerOfPreviousRound)
         {
-            Score.checkScore(gameName.players);
+            //Score.checkScore(gameName.players);
             gameName.players.ElementAt(winnerOfPreviousRound).playDeck.showFirstCard();
             int category = Turn.selectCategory(gameName);
             Comparator.compareCategory(category, gameName.players, gameName);
