@@ -17,22 +17,24 @@ namespace cardgame
             for (int i = 0; i < players.Count; i++)
             {
                 value[i] = players[i].compareValue(selectedCategory);
-                //Console.WriteLine("Value at index[{0}]: {1}", i, value[i]);
+                Console.Write(" {0}\t", players[i].getPlayerName);
+                Console.Write(" {0}:\t", players[i].playDeck.FirstCardName() );
+                Console.Write( players[i].playDeck.getSomeCategoryContent(selectedCategory) );
+                Console.WriteLine();
+
             }
 
             // Gets maximum value in value array and get the index of the maximum value:
             decimal maxValue = value.Max();
             int maxIndex = value.ToList().IndexOf(maxValue);
-            
-            // Save in string because checkScore() rearranges the index of players-list thereby obsoleting maxIndex:
-            string roundWinner = players[maxIndex].getPlayerName;
-            
+
+
             // Gives loot to winner, checkScore and announce:
-            Console.Clear();
-            Console.Write(" {0} won the round and gets the following loot cards: ", roundWinner);
+            //Console.Clear();
+            Console.Write(" {0} won the round and gets the following loot cards: ", players[maxIndex].getPlayerName);
             for (int j = 0; j < players.Count; j++)
             {
-                players[j].playDeck.printFirstCardName();
+                Console.Write(players[j].playDeck.FirstCardName() + "; ");
                 players[j].getLootCard(players[maxIndex]);
             }
             

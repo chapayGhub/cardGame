@@ -23,6 +23,7 @@ namespace cardgame
         {
             return categoryName + ": " + categoryValue + " " + categoryUnit;
         }
+        
         public decimal returnCategoryValue()
         {
             return this.categoryValue;

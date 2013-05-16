@@ -54,6 +54,11 @@ namespace cardgame
             return this.cards.ElementAt(0).categoryList.Count;
         }
 
+        public string getSomeCategoryContent(int categoryIndex)
+        {
+            return this.cards.ElementAt(0).printCategory(categoryIndex);
+        }
+
         
 
     } // END DECK
