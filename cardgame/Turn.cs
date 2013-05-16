@@ -36,7 +36,9 @@ namespace cardgame
 
         public static void nextRound(Game gameName, int winnerOfPreviousRound)
         {
-            //Score.checkScore(gameName.players);
+            Console.WriteLine();
+            Console.WriteLine("\n {0} gets to pick next category: ", gameName.players.ElementAt(winnerOfPreviousRound).getPlayerName);
+            Console.WriteLine();
             gameName.players.ElementAt(winnerOfPreviousRound).playDeck.showFirstCard();
             int category = Turn.selectCategory(gameName);
             Comparator.compareCategory(category, gameName.players, gameName);

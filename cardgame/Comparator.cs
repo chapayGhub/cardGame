@@ -38,14 +38,6 @@ namespace cardgame
             
             Score.checkScore(gameName, gameName.players, maxIndex);
             
-            // TODO: Perhaps move this to checkScore? Or maybe not, but the nextRound-call is in checkScore ...
-            // TODO: If move announcement of winner to checkScore, then replace roundWinner-string here with maxIndex-player
-            Console.WriteLine();
-            Console.WriteLine("\n {0} gets to pick next category: ", roundWinner);
-            Console.WriteLine();
-
-
-
 
             // TODO: Make sure that the winner is random, if two or more players have same value.
         }
