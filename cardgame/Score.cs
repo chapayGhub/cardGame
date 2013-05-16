@@ -13,7 +13,7 @@ namespace cardgame
         //Constructor
 
         //Methods
-        static public void checkScore(List<Player> players)
+        static public void checkScore(Game gameName, List<Player> players, int winnerOfRound)
         {
 
             foreach (Player playerId in players.Reverse<Player>())
@@ -28,6 +28,9 @@ namespace cardgame
                     Console.WriteLine();
                     //Console.WriteLine("Playercount before remove: " + players.Count());
                     Console.WriteLine(" " + playerId.getPlayerName + " is out of cards. Better luck next time!");
+                    
+                    // If index of removed player is less than winnerOfRound, then decrement index of winnerOfRound
+                    if (players.IndexOf(playerId) < winnerOfRound) { winnerOfRound--; }
                     players.Remove(playerId);
                     //Console.WriteLine("Playercount after remove: " + players.Count());
                 }
@@ -41,13 +44,15 @@ namespace cardgame
 
             // Last man standing gets a textbased celebration and the application exits:
             if (players.Count == 1)
-                {
+            {
                     Score.winrar(players.ElementAt(0).getPlayerName);
                     Console.ReadLine();
                     Environment.Exit(0);
 
-                }
+            }
 
+            // Call nextRound with possibly modified list-index of winnerOfRound:
+            Turn.nextRound(gameName, winnerOfRound);
         }
 
         static public void printScoreboard(List<Player> players)
