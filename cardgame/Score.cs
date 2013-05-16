@@ -72,21 +72,20 @@ namespace cardgame
 
         static public void quitScore(List<Player> players)
         {
-            int tempLargestDeck = 0;
-            Player tempWinner = new Player("tempPlayer");
 
             Score.printScoreboard(players);
 
-            foreach (Player playerId in players)
-            {   
-                if (playerId.currentDeckSize() > tempLargestDeck)
-                {
-                    tempLargestDeck = playerId.currentDeckSize();
-                    tempWinner = playerId;
-                }
+            var orderedByDeckSize = players.OrderBy(x => x.currentDeckSize());
+            orderedByDeckSize.Reverse();
+            if (orderedByDeckSize.ElementAt(0).currentDeckSize() == orderedByDeckSize.ElementAt(1).currentDeckSize())
+            {
+                Console.WriteLine("You are a failure. None of you won!");
+            }
+            else
+            {
+                Score.winrar(players.ElementAt(0).getPlayerName);
             }
             
-            Score.winrar(tempWinner.getPlayerName);
         }
         //Winner screenprint method because awesome!
         static public void winrar(string winrarName)
