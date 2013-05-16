@@ -40,9 +40,9 @@ namespace cardgame
             base.print();
         }
 
-        public void printFirstCardName()
+        public string FirstCardName()
         {
-            Console.Write(this.cards.ElementAt(0).countryName + "; ");
+            return this.cards.ElementAt(0).countryName;
         }
 
 
