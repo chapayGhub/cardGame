@@ -19,9 +19,21 @@ namespace cardgame
             Console.WriteLine("\n GEOGRAPHY CARD GAME\t\n");
             Console.ResetColor();
             worldMap();
-            Console.Write(" Enter number of players: ");
+            Console.WriteLine();
+            Console.WriteLine(" In-game options:");
+            Console.WriteLine(" Press \"q\" to quit the game");
+            Console.WriteLine(" Press \"s\" to bring up the scoreboard");
+            Console.WriteLine();
             
+            Console.Write(" Enter number of players: ");
             int tempPlayers = Convert.ToInt32(Console.ReadLine());
+            while (tempPlayers == 0)
+            {
+                Console.WriteLine();
+                Console.WriteLine(" Minimum number of players allowed is 1.");
+                Console.Write(" Enter number of players: ");
+                tempPlayers = Convert.ToInt32(Console.ReadLine());
+            }
             Console.WriteLine();
             
             createPlayers(tempPlayers);
@@ -64,11 +76,12 @@ namespace cardgame
             Console.WriteLine(" Deck contains the following cards:");
             world.print();
             Console.WriteLine();
+            Console.WriteLine(" Press enter to begin game.");
             Console.ReadLine();
 
             //Console.WriteLine("Test: The cards have been dealt in the following way:");
             world.deal(this.players);
-            Console.WriteLine("Cards have been dealt.");
+            Console.WriteLine(" Cards have been dealt to player.");
             //this.players.ForEach(Player => Player.print());
             //Console.ReadLine();
 
