@@ -11,6 +11,10 @@ namespace cardgame
         // TODO: delete testing writelines.
         public static void compareCategory(int selectedCategory, List<Player> players, Game gameName)
         {
+            Console.Clear();
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("\n RESULTS\t\n");
+            Console.ResetColor();
 
             // Makes an array of category values that correspond to the index of the list of players:
             decimal[] value = new decimal[players.Count];
@@ -30,14 +34,30 @@ namespace cardgame
 
 
             // Gives loot to winner, checkScore and announce:
-            //Console.Clear();
+            Console.WriteLine();
             Console.Write(" {0} won the round and gets the following loot cards: ", players[maxIndex].getPlayerName);
             for (int j = 0; j < players.Count; j++)
             {
                 Console.Write(players[j].playDeck.FirstCardName() + "; ");
                 players[j].getLootCard(players[maxIndex]);
             }
+            Console.WriteLine();
+
+            // Give other in-game options in dark gray:
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write(" Options (press during \"select a category\"): \"q\" quits the game. ");
+            Console.Write("\"s\" shows the scoreboard");
+            Console.ResetColor();
+            Console.WriteLine();
+
+
+            Console.WriteLine();
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("\n NEW ROUND\t");
+            Console.ResetColor();
             
+            // Run control of             
             Score.checkScore(gameName, gameName.players, maxIndex);
             
 
