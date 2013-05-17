@@ -8,14 +8,6 @@ namespace cardgame
 {
     static class Turn
     {
-        public static int selectFirstPlayer(List<Player> players)
-        {
-            int numberOfPlayers = players.Count;
-            Random rnd = new Random();
-            var randomFirstPlayer = rnd.Next(0, numberOfPlayers);
-            Console.WriteLine(" {0} goes first! Here's your card: ", players[randomFirstPlayer].getPlayerName);
-            return randomFirstPlayer;
-        }
 
         public static void firstRound(Game gameName)
         {
@@ -24,28 +16,45 @@ namespace cardgame
             Console.WriteLine("\n GAME BEGINS\t\n");
             Console.ResetColor();
             Console.WriteLine();
+            
             int firstPlayer = Turn.selectFirstPlayer(gameName.players);
             Console.WriteLine();
-            //Score.checkScore(gameName.players);
-            // The following monster shows the first card of the player who got to go first:
+            // Show the first card of the player who got to go first:
             gameName.players.ElementAt(firstPlayer).playDeck.showFirstCard();
             int category = Turn.selectCategory(gameName);
             Comparator.compareCategory(category, gameName.players, gameName);
-                        
+
+        }
+
+        public static int selectFirstPlayer(List<Player> players)
+        {
+            int numberOfPlayers = players.Count;
+            Random rnd = new Random();
+            var randomFirstPlayer = rnd.Next(0, numberOfPlayers);
+            
+            Console.BackgroundColor = ConsoleColor.DarkRed;
+            Console.Write(" " + players[randomFirstPlayer].getPlayerName + " ");
+            Console.ResetColor();
+            Console.WriteLine(" goes first! Here's your card: ");
+            return randomFirstPlayer;
         }
 
         public static void nextRound(Game gameName, int winnerOfPreviousRound)
         {
             Console.WriteLine();
-            Console.WriteLine("\n {0} gets to pick next category: ", gameName.players.ElementAt(winnerOfPreviousRound).getPlayerName);
+            Console.BackgroundColor = ConsoleColor.DarkRed;
+            Console.Write("\n " + gameName.players.ElementAt(winnerOfPreviousRound).getPlayerName + " ");
+            Console.ResetColor();
+            Console.WriteLine(" gets to pick next category: ");
             Console.WriteLine();
+
+            // Show the first card of the player who won previous round:
             gameName.players.ElementAt(winnerOfPreviousRound).playDeck.showFirstCard();
             int category = Turn.selectCategory(gameName);
             Comparator.compareCategory(category, gameName.players, gameName);
         }
 
         // TODO: Make number of categories automatically match test.txt
-        // TODO: Make a try-catch to avoid errors if wrong type input
         public static int selectCategory(Game game)
         {
             
