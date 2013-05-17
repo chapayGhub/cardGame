@@ -19,6 +19,11 @@ namespace cardgame
             Console.WriteLine("\n GEOGRAPHY CARD GAME\t\n");
             Console.ResetColor();
             worldMap();
+            Console.WriteLine();
+            Console.WriteLine(" In-game options:");
+            Console.WriteLine(" Press \"q\" to quit the game");
+            Console.WriteLine(" Press \"s\" to bring up the scoreboard");
+            Console.WriteLine();
             Console.Write(" Enter number of players: ");
             
             int tempPlayers = Convert.ToInt32(Console.ReadLine());
