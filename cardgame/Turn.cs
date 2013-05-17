@@ -54,14 +54,14 @@ namespace cardgame
             Comparator.compareCategory(category, gameName.players, gameName);
         }
 
-        // TODO: Make number of categories automatically match test.txt
         public static int selectCategory(Game game)
         {
-            
             int categoryValue;
             String categorySelected;
 
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write(" Select a category: ");
+            Console.ResetColor();
             categorySelected = Console.ReadLine();
 
             if(categorySelected.ToUpper() == "Q")
@@ -73,13 +73,18 @@ namespace cardgame
             if (categorySelected.ToUpper() == "S")
             {
                 Score.printScoreboard(game.players);
+                Console.ForegroundColor = ConsoleColor.Blue;               
                 Console.Write(" Select a category: ");
+                Console.ResetColor();
                 categorySelected = Console.ReadLine();
             }
 
             while (!Int32.TryParse(categorySelected, out categoryValue) || categoryValue > game.getNumberOfCategories() - 1 || categoryValue < 0)
             {
-                Console.WriteLine("Not a valid number, try again.");
+                Console.Write(" Not a valid category number. ");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write("Try again: ");
+                Console.ResetColor();
                 categorySelected = Console.ReadLine();
             }
 
