@@ -90,15 +90,67 @@ namespace cardgame
         //Winner screenprint method because awesome!
         static public void winrar(string winrarName)
         {
-            Console.WriteLine(" ********************************************************");
-            Console.WriteLine(" ***************    A WINRAR IS YOU!!    ****************");
-            Console.WriteLine(" ********************************************************");
-            Console.WriteLine("          ***************************************        ");
-            Console.WriteLine("                      >>>>>" + winrarName + "<<<<<");
-            Console.WriteLine("          ***************************************        ");
-            Console.WriteLine(" ********************************************************");
-            Console.WriteLine(" ***************    A WINRAR IS YOU!!    ****************");
-            Console.WriteLine(" ********************************************************");
+            for (int i = 0; i < 10; i++ )
+            {
+                Console.Clear();
+
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.BackgroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("    ##      ## #### ##    ## ##    ## ######## ########  ");
+                Console.WriteLine("    ##  ##  ##  ##  ###   ## ###   ## ##       ##     ## ");
+                Console.WriteLine("    ##  ##  ##  ##  ####  ## ####  ## ##       ##     ## ");
+                Console.WriteLine("    ##  ##  ##  ##  ## ## ## ## ## ## ######   ########  ");
+                Console.WriteLine("    ##  ##  ##  ##  ##  #### ##  #### ##       ##   ##   ");
+                Console.WriteLine("    ##  ##  ##  ##  ##   ### ##   ### ##       ##    ##  ");
+                Console.WriteLine("     ###  ###  #### ##    ## ##    ## ######## ##     ## ");
+                Console.ResetColor();
+                Console.WriteLine();
+                Console.WriteLine("\t\tTHE WINNER IS");
+                Console.WriteLine("\t\t\t" + winrarName);
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.BackgroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("  ##      ## #### ##    ## ##    ## ######## ########    ");
+                Console.WriteLine("  ##  ##  ##  ##  ###   ## ###   ## ##       ##     ##   ");
+                Console.WriteLine("  ##  ##  ##  ##  ####  ## ####  ## ##       ##     ##   ");
+                Console.WriteLine("  ##  ##  ##  ##  ## ## ## ## ## ## ######   ########    ");
+                Console.WriteLine("  ##  ##  ##  ##  ##  #### ##  #### ##       ##   ##     ");
+                Console.WriteLine("  ##  ##  ##  ##  ##   ### ##   ### ##       ##    ##    ");
+                Console.WriteLine("   ###  ###  #### ##    ## ##    ## ######## ##     ##   ");
+                Console.ResetColor();
+                for (int j = 0; j < 99999999; j++) { };
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.BackgroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("  ##      ## #### ##    ## ##    ## ######## ########    ");
+                Console.WriteLine("  ##  ##  ##  ##  ###   ## ###   ## ##       ##     ##   ");
+                Console.WriteLine("  ##  ##  ##  ##  ####  ## ####  ## ##       ##     ##   ");
+                Console.WriteLine("  ##  ##  ##  ##  ## ## ## ## ## ## ######   ########    ");
+                Console.WriteLine("  ##  ##  ##  ##  ##  #### ##  #### ##       ##   ##     ");
+                Console.WriteLine("  ##  ##  ##  ##  ##   ### ##   ### ##       ##    ##    ");
+                Console.WriteLine("   ###  ###  #### ##    ## ##    ## ######## ##     ##   ");
+                Console.ResetColor();
+                Console.WriteLine();
+                Console.WriteLine("\t\tTHE WINNER IS");
+                Console.WriteLine("\t\t\t" + winrarName);
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.BackgroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("    ##      ## #### ##    ## ##    ## ######## ########  ");
+                Console.WriteLine("    ##  ##  ##  ##  ###   ## ###   ## ##       ##     ## ");
+                Console.WriteLine("    ##  ##  ##  ##  ####  ## ####  ## ##       ##     ## ");
+                Console.WriteLine("    ##  ##  ##  ##  ## ## ## ## ## ## ######   ########  ");
+                Console.WriteLine("    ##  ##  ##  ##  ##  #### ##  #### ##       ##   ##   ");
+                Console.WriteLine("    ##  ##  ##  ##  ##   ### ##   ### ##       ##    ##  ");
+                Console.WriteLine("     ###  ###  #### ##    ## ##    ## ######## ##     ## ");
+                Console.ResetColor();
+                for (int k = 0; k < 99999999; k++) { };
+                
+
+            }
+            Console.ReadLine();
+            
+
         }
 
 
