@@ -22,9 +22,18 @@ namespace cardgame
 
         public virtual void print()
         {
-            foreach (var card in this.cards)
-                Console.Write(card.countryName + ", ");
-            Console.WriteLine();
+            for (int i = 1; i < this.cards.Count()+1; i++)
+            {
+                Console.Write(" " + this.cards.ElementAt(i-1).countryName);
+                if (i != this.cards.Count())
+                {
+                    Console.Write(",");
+                }
+                if (i % 5 == 0)
+                {
+                    Console.Write("\n");
+                }
+            }
         }
 
         public int Count()
