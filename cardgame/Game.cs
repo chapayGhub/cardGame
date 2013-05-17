@@ -18,28 +18,33 @@ namespace cardgame
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("\n GEOGRAPHY CARD GAME\t\n");
             Console.ResetColor();
+
+            // Print ascii-art world map:
             worldMap();
-            Console.WriteLine();
-            Console.WriteLine(" In-game options:");
-            Console.WriteLine(" Press \"q\" to quit the game");
-            Console.WriteLine(" Press \"s\" to bring up the scoreboard");
-            Console.WriteLine();
             
+            // Get number of players and create player objects:
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write(" Enter number of players: ");
+            Console.ResetColor();
             int tempPlayers = Convert.ToInt32(Console.ReadLine());
             while (tempPlayers == 0)
             {
                 Console.WriteLine();
                 Console.WriteLine(" Minimum number of players allowed is 1.");
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.Write(" Enter number of players: ");
+                Console.ResetColor();
                 tempPlayers = Convert.ToInt32(Console.ReadLine());
             }
             Console.WriteLine();
-            
             createPlayers(tempPlayers);
 
+            // Choose which deck to play and create deck:
             Console.WriteLine(" Choose deck type:");
-            Console.Write(" For countries press 1: ");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write(" \tFor countries press 1: ");
+            Console.ResetColor();
             int tempDeck = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
             createDeck(tempDeck);
@@ -50,7 +55,9 @@ namespace cardgame
         {
             for (int i = 1; i < players+1; i++)
             {
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.Write(" Enter name of player {0}: ", i);
+                Console.ResetColor();
                 String playername = Console.ReadLine();
                 this.players.Add(new Player(playername));
                 
@@ -72,16 +79,21 @@ namespace cardgame
             numberOfCategories = world.getNumberOfCategories();
             //Console.WriteLine();
             //Console.ReadLine();
-
+                        
             Console.WriteLine(" Deck contains the following cards:");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
             world.print();
+            Console.ResetColor();
+            
             Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine(" Press enter to begin game.");
+            Console.ResetColor();
             Console.ReadLine();
 
-            //Console.WriteLine("Test: The cards have been dealt in the following way:");
+
+            // Deal deck between players:
             world.deal(this.players);
-            Console.WriteLine(" Cards have been dealt to player.");
             //this.players.ForEach(Player => Player.print());
             //Console.ReadLine();
 
