@@ -29,7 +29,9 @@ namespace cardgame
 
         public void showFirstCard()
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\tCountry: " + this.cards.ElementAt(0).countryName);
+            Console.ResetColor();
             this.cards.ElementAt(0).printAllCategories();
             Console.WriteLine();
         }
