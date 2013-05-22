@@ -79,7 +79,7 @@ namespace cardgame
             orderedByDeckSize.Reverse();
             if (orderedByDeckSize.ElementAt(0).currentDeckSize() == orderedByDeckSize.ElementAt(1).currentDeckSize())
             {
-                Console.WriteLine("You are a failure. None of you won!");
+                Console.WriteLine(" It's a draw. None of you won!");
             }
             else
             {
