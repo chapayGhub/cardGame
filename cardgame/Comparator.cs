@@ -46,8 +46,7 @@ namespace cardgame
             // Give other in-game options in dark gray:
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.Write(" Options (press during \"select a category\"): \"q\" quits the game. ");
-            Console.Write("\"s\" shows the scoreboard");
+            Console.Write(" Options: \"q\" quits the game. \"s\" shows the scoreboard ");
             Console.ResetColor();
             Console.WriteLine();
 
