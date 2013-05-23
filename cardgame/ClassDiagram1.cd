@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="cardgame.Card">
+    <Position X="9.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAEAAAIAAAAAAAQAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Card.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="categoryList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="cardgame.Category">
+    <Position X="9.25" Y="3.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>BAiAAAAAAAAIAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cardgame.Comparator" Collapsed="true">
+    <Position X="6" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Comparator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cardgame.Deck">
+    <Position X="2.25" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQAAAAAAAAAAAAAAhAAAQAAIAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Deck.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="cards" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="cardgame.Game">
+    <Position X="6.5" Y="7" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAABAAAAABgAAAAAAAAAAAAIAAAAACAAAA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="players" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="cardgame.LootDeck">
+    <Position X="0.5" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>LootDeck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cardgame.Player">
+    <Position X="1.25" Y="7" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQAAAAIAAAAAAAEBAAAAAAAAAAAAAAIAAAAgQAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="lootDeck" />
+      <Field Name="playDeck" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="cardgame.playerDeck">
+    <Position X="3" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAgAAAAIAAAIAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>PlayerDeck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cardgame.PopulateDeck" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAI=</HashCode>
+      <FileName>PopulateDeck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cardgame.Score" Collapsed="true">
+    <Position X="7.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAABEAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Score.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cardgame.TotalDeck">
+    <Position X="5.5" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>TotalDeck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cardgame.Turn" Collapsed="true">
+    <Position X="6" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAgAQAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Turn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
