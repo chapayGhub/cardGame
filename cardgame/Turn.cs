@@ -79,7 +79,7 @@ namespace cardgame
                 categorySelected = Console.ReadLine();
             }
 
-            while (!Int32.TryParse(categorySelected, out categoryValue) || categoryValue > game.getNumberOfCategories() - 1 || categoryValue < 0)
+            while (!Int32.TryParse(categorySelected, out categoryValue) || categoryValue > game.players.ElementAt(0).playDeck.getNumberOfCategories() - 1 || categoryValue < 0)
             {
                 Console.Write(" Not a valid category number. ");
                 Console.ForegroundColor = ConsoleColor.Blue;
