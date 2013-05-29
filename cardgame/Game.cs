@@ -73,10 +73,6 @@ namespace cardgame
         public void createDeck(int chosenDeck)
         {
             TotalDeck world = new TotalDeck();
-            //Console.WriteLine("Test: Cards imported:");
-            PopulateDeck.populate(world);
-            //Console.WriteLine();
-            //Console.ReadLine();
                         
             Console.WriteLine(" Deck contains the following cards:");
             Console.ForegroundColor = ConsoleColor.DarkGray;
