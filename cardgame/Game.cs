@@ -14,30 +14,9 @@ namespace cardgame
         {
             this.players = new List<Player>();
 
-            Console.BackgroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("\n GEOGRAPHY CARD GAME\t\n");
-            Console.ResetColor();
-
-            // Print ascii-art world map:
-            worldMap();
+            introScreen();
             
-            // Get number of players and create player objects:
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write(" Enter number of players: ");
-            Console.ResetColor();
-            int tempPlayers = Convert.ToInt32(Console.ReadLine());
-            while (tempPlayers == 0)
-            {
-                Console.WriteLine();
-                Console.WriteLine(" Minimum number of players allowed is 1.");
-                Console.ForegroundColor = ConsoleColor.Blue;
-                Console.Write(" Enter number of players: ");
-                Console.ResetColor();
-                tempPlayers = Convert.ToInt32(Console.ReadLine());
-            }
-            Console.WriteLine();
-            createPlayers(tempPlayers);
+            createPlayers();
             
             // Instantiate new deck:
             TotalDeck world = new TotalDeck();
@@ -46,29 +25,40 @@ namespace cardgame
         }
 
 
-        public void createPlayers(int players)
+        public void createPlayers()
         {
-            for (int i = 1; i < players+1; i++)
+            // Get number of players and create player objects:
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write(" Enter number of players: ");
+            Console.ResetColor();
+            int numberOfPlayers = Convert.ToInt32(Console.ReadLine());
+            while (numberOfPlayers == 0)
             {
+                Console.WriteLine();
+                Console.WriteLine(" Minimum number of players allowed is 1.");
                 Console.ForegroundColor = ConsoleColor.Blue;
-                Console.Write(" Enter name of player {0}: ", i);
+                Console.Write(" Enter number of players: ");
                 Console.ResetColor();
-                String playername = Console.ReadLine();
-                this.players.Add(new Player(playername));
-                
+                numberOfPlayers = Convert.ToInt32(Console.ReadLine());
             }
             Console.WriteLine();
 
-            //Console.WriteLine("Test: Initialising players and decks:");
-            //for (int i = 0; i < players; i++ )
-            //{
-            //    this.players.ElementAt(i).print();
-            //}
+            for (int i = 1; i < numberOfPlayers+1; i++)
+            {
+                this.players.Add( new Player( this.players.Count()+1 ) );
+                
+            }
+            Console.WriteLine();
         }
 
 
-        static public void worldMap()
+        static public void introScreen()
         {
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("\n GEOGRAPHY GAME\t\n");
+            Console.ResetColor();
+
             // Source: www.retrojunkie.com/asciiart/maps/worldmap.htm
             Console.WriteLine(" :::::::::::''  ''::'      '::::::  `:::::::::::::'.:::::::::::::::");
             Console.WriteLine(" :::::::::' :. :  :         ::::::  :::::::::::.:::':::::::::::::::");

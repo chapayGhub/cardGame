@@ -15,11 +15,15 @@ namespace cardgame
 
         // Methods:
 
-        public Player(String name)
+        public Player(int playerNumber)
         {
-            this.playerName = name;
             this.playDeck = new playerDeck();
             this.lootDeck = new LootDeck();
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write(" Enter name of player {0}: ", playerNumber);
+            Console.ResetColor();
+            this.playerName = Console.ReadLine();
         }
 
         public string getPlayerName { get { return playerName; } }
@@ -28,6 +32,7 @@ namespace cardgame
         {
             return this.playDeck.compare(category);
         }
+        
         public int currentDeckSize()
         {
             return lootDeck.Count() + playDeck.Count();
