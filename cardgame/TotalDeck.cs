@@ -13,6 +13,7 @@ namespace cardgame
         {
             this.cards = new List<Card>();
             populate();
+            printDeckContent();
         }
 
         public void populate()
@@ -59,6 +60,19 @@ namespace cardgame
 
         }
 
+        public void printDeckContent()
+        {
+            Console.WriteLine(" Deck contains the following cards:");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            this.print();
+            Console.ResetColor();
+
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine(" Press enter to begin game.");
+            Console.ResetColor();
+            Console.ReadLine();
+        }
 
         public void deal(List<Player> players)
         {

@@ -38,8 +38,11 @@ namespace cardgame
             }
             Console.WriteLine();
             createPlayers(tempPlayers);
-
-            createDeck();
+            
+            // Instantiate new deck:
+            TotalDeck world = new TotalDeck();
+            // Deal deck between players:
+            world.deal(this.players);
         }
 
 
@@ -61,28 +64,6 @@ namespace cardgame
             //{
             //    this.players.ElementAt(i).print();
             //}
-        }
-
-        public void createDeck()
-        {
-            TotalDeck world = new TotalDeck();
-                        
-            Console.WriteLine(" Deck contains the following cards:");
-            Console.ForegroundColor = ConsoleColor.DarkGray;
-            world.print();
-            Console.ResetColor();
-            
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine(" Press enter to begin game.");
-            Console.ResetColor();
-            Console.ReadLine();
-
-
-            // Deal deck between players:
-            world.deal(this.players);
-
-
         }
 
 
