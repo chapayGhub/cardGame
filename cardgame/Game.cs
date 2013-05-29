@@ -39,14 +39,7 @@ namespace cardgame
             Console.WriteLine();
             createPlayers(tempPlayers);
 
-            // Choose which deck to play and create deck:
-            Console.WriteLine(" Choose deck type:");
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write(" \tFor countries press 1: ");
-            Console.ResetColor();
-            int tempDeck = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine();
-            createDeck(tempDeck);
+            createDeck();
         }
 
 
@@ -70,7 +63,7 @@ namespace cardgame
             //}
         }
 
-        public void createDeck(int chosenDeck)
+        public void createDeck()
         {
             TotalDeck world = new TotalDeck();
                         
@@ -88,8 +81,7 @@ namespace cardgame
 
             // Deal deck between players:
             world.deal(this.players);
-            //this.players.ForEach(Player => Player.print());
-            //Console.ReadLine();
+
 
         }
 
