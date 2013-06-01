@@ -21,7 +21,7 @@ namespace cardgame
         }
 
 
-        public void createPlayers()
+        private void createPlayers()
         {
             // Get number of players and create player objects:
             Console.WriteLine();
@@ -97,7 +97,7 @@ namespace cardgame
             }
             if (categorySelected.ToUpper() == "S")
             {
-                Score.printScoreboard(this.players);
+                printScoreboard();
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.Write(" Select a category: ");
                 Console.ResetColor();
@@ -132,7 +132,7 @@ namespace cardgame
                 value[i] = this.players[i].compareValue(selectedCategory);
                 Console.Write(" {0}\t", this.players[i].getPlayerName);
                 Console.Write(" {0}:\t", this.players[i].playDeck.FirstCardName() );
-                Console.Write( this.players[i].playDeck.getSomeCategoryContent(selectedCategory) );
+                Console.Write( this.players[i].playDeck.getContentofOneCategory(selectedCategory) );
                 Console.WriteLine();
 
             }
@@ -204,7 +204,7 @@ namespace cardgame
             // Last man standing gets a textbased celebration and the application exits:
             if (players.Count == 1)
             {
-                Score.winrar(players.ElementAt(0).getPlayerName);
+                winrar(players.ElementAt(0).getPlayerName);
                 Console.ReadLine();
                 Environment.Exit(0);
 
@@ -246,7 +246,7 @@ namespace cardgame
 
         }
 
-        static public void winrar(string winrarName)
+        private void winrar(string winrarName)
         {
             for (int i = 0; i < 30; i++)
             {

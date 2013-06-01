@@ -7,10 +7,10 @@ using System.ComponentModel;
 
 namespace cardgame
 {
-    class playerDeck : Deck
+    class playDeck : Deck
     {
 
-        public playerDeck()
+        public playDeck()
         {
         }
 

@@ -63,7 +63,7 @@ namespace cardgame
             return this.cards.ElementAt(0).categoryList.Count;
         }
 
-        public string getSomeCategoryContent(int categoryIndex)
+        public string getContentofOneCategory(int categoryIndex)
         {
             return this.cards.ElementAt(0).printCategory(categoryIndex);
         }

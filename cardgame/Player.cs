@@ -10,14 +10,14 @@ namespace cardgame
     {
         // Variables:
         private String playerName = "";
-        public playerDeck playDeck;
+        public playDeck playDeck;
         public LootDeck lootDeck;
 
         // Methods:
 
         public Player(int playerNumber)
         {
-            this.playDeck = new playerDeck();
+            this.playDeck = new playDeck();
             this.lootDeck = new LootDeck();
 
             Console.ForegroundColor = ConsoleColor.Blue;
