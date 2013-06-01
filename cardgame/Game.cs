@@ -78,8 +78,7 @@ namespace cardgame
             Console.ReadLine();
 
         }
-
-
+        
         private int selectCategory()
         {
             int categoryValue;
@@ -118,7 +117,6 @@ namespace cardgame
             return categoryValue;
 
         }
-
 
         private void compareCategory(int selectedCategory)
         {
@@ -173,7 +171,6 @@ namespace cardgame
 
             // TODO: Make sure that the winner is random, if two or more players have same value.
         }
-
 
         private void checkScore(int winnerOfRound)
         {
@@ -249,9 +246,6 @@ namespace cardgame
 
         }
 
-
-
-        //Winner screenprint method because awesome!
         static public void winrar(string winrarName)
         {
             for (int i = 0; i < 30; i++)
@@ -317,7 +311,6 @@ namespace cardgame
 
 
         }
-
 
         private void introScreen()
         {
