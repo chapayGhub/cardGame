@@ -254,7 +254,7 @@ namespace cardgame
         //Winner screenprint method because awesome!
         static public void winrar(string winrarName)
         {
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 30; i++)
             {
                 Console.Clear();
 
@@ -283,7 +283,7 @@ namespace cardgame
                 Console.WriteLine("   ###  ###  #### ##    ## ##    ## ######## ##     ##   ");
                 Console.ResetColor();
                 
-                for (int j = 0; j < 1000000; j++) { };
+                for (int j = 0; j < 3000000; j++) { };
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.BackgroundColor = ConsoleColor.Yellow;
@@ -309,11 +309,11 @@ namespace cardgame
                 Console.WriteLine("  ##  ##  ##  ##  ##   ### ##   ### ##       ##    ##    ");
                 Console.WriteLine("   ###  ###  #### ##    ## ##    ## ######## ##     ##   ");
                 Console.ResetColor();
-                for (int k = 0; k < 1000000; k++) { };
+                for (int k = 0; k < 3000000; k++) { };
 
 
             }
-            Console.ReadLine();
+            //Console.ReadLine();
 
 
         }
