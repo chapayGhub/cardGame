@@ -18,9 +18,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="cardgame.Deck">
-    <Position X="2.75" Y="0.5" Width="3.5" />
+    <Position X="2.5" Y="0.5" Width="3.75" />
     <TypeIdentifier>
-      <HashCode>AAQQAAAAAAAAAAAAAAhAAAQAAIAAAAAAAAAAAAACAAA=</HashCode>
+      <HashCode>AAQQAAAAAAAAAABAAAhAAAQAAAAAAAAAAAAAAAACAAA=</HashCode>
       <FileName>Deck.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -55,11 +55,11 @@
       <Field Name="lootDeck" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="cardgame.playerDeck">
+  <Class Name="cardgame.playDeck">
     <Position X="3.25" Y="3.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAgAAAAIAAAIAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
-      <FileName>PlayerDeck.cs</FileName>
+      <FileName>PlayDeck.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="cardgame.TotalDeck">
