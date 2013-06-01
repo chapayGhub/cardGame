@@ -8,7 +8,6 @@ namespace cardgame
 {
     static class Comparator
     {
-        // TODO: delete testing writelines.
         public static void compareCategory(int selectedCategory, List<Player> players, Game gameName)
         {
             Console.Clear();

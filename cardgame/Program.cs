@@ -11,9 +11,6 @@ namespace cardgame
         static void Main(string[] args)
         {   
             Game gameid = new Game();
-            Turn.firstRound(gameid);
-
-            Console.ReadLine();
         }
     } // END PROGRAM
 
